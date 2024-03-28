@@ -1,4 +1,4 @@
-package artur.maschenko.dateconverter.program;
+package artur.maschenko.dateconverter.repository;
 
 import org.springframework.stereotype.Repository;
 import java.time.Instant;
@@ -7,6 +7,7 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
+
 
 @Repository
 public class DateConverterProgram {
