@@ -10,8 +10,12 @@ import java.util.Optional;
 
 @Service
 public class TimeDataService {
+    private final TimeDataRepository timeDataRepository;
+
     @Autowired
-    private TimeDataRepository timeDataRepository;
+    public TimeDataService(TimeDataRepository timeDataRepository) {
+        this.timeDataRepository = timeDataRepository;
+    }
 
     public List<TimeData> getAllTimeData() {
         // Получить все записи из таблицы TimeData

@@ -10,8 +10,12 @@ import java.util.Optional;
 
 @Service
 public class TimeDataConverterMappingService {
+    private final TimeDataConverterMappingRepository timeDataConverterMappingRepository;
+
     @Autowired
-    private TimeDataConverterMappingRepository timeDataConverterMappingRepository;
+    public TimeDataConverterMappingService(TimeDataConverterMappingRepository timeDataConverterMappingRepository) {
+        this.timeDataConverterMappingRepository = timeDataConverterMappingRepository;
+    }
 
     // Получить все записи из таблицы TimeDataConverterMapping
     public List<TimeDataConverterMapping> getAllTimeDataConverterMappings() {

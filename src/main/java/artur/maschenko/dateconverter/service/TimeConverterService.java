@@ -10,8 +10,12 @@ import java.util.Optional;
 
 @Service
 public class TimeConverterService {
+    private final TimeConverterRepository timeConverterRepository;
+
     @Autowired
-    private TimeConverterRepository timeConverterRepository;
+    public TimeConverterService(TimeConverterRepository timeConverterRepository) {
+        this.timeConverterRepository = timeConverterRepository;
+    }
 
     // Получить все записи из таблицы TimeConverter
     public List<TimeConverter> getAllTimeConverters() {

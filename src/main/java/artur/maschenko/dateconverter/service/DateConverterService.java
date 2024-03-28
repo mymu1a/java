@@ -24,7 +24,7 @@ public class DateConverterService {
     private final TimeDataRepository timeDataRepository;
     private final TimeConverterRepository timeConverterRepository;
     private final TimeDeviceDataRepository timeDeviceDataRepository;
-    private final TimeDataConverterMappingRepository timeDataConverterMappingRepository; // Добавлено
+    private final TimeDataConverterMappingRepository timeDataConverterMappingRepository;
 
     @Autowired
     public DateConverterService(TimeDataRepository timeDataRepository, TimeConverterRepository timeConverterRepository, TimeDeviceDataRepository timeDeviceDataRepository, TimeDataConverterMappingRepository timeDataConverterMappingRepository) {
