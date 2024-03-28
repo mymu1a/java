@@ -11,8 +11,12 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/time-data-converter-mapping")
 public class TimeDataConverterMappingController {
+    private final TimeDataConverterMappingService timeDataConverterMappingService;
+
     @Autowired
-    private TimeDataConverterMappingService timeDataConverterMappingService;
+    public TimeDataConverterMappingController(TimeDataConverterMappingService timeDataConverterMappingService) {
+        this.timeDataConverterMappingService = timeDataConverterMappingService;
+    }
 
     // Получить все записи из таблицы TimeDataConverterMapping
     @GetMapping("/")

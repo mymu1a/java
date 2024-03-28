@@ -11,8 +11,12 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/time-data")
 public class TimeDataController {
+    private final TimeDataService timeDataService;
+
     @Autowired
-    private TimeDataService timeDataService;
+    public TimeDataController(TimeDataService timeDataService) {
+        this.timeDataService = timeDataService;
+    }
 
     // Получить все записи из таблицы TimeData
     @GetMapping("/")
