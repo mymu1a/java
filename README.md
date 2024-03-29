@@ -9,14 +9,14 @@
 2. Подключить в проект БД (PostgreSQL/MySQL/и т.д.). Реализация связи один ко многим @OneToMany. Реализация связи многие ко многим @ManyToMany. Реализовать CRUD-операции со всеми сущностями.
 ---
 # USAGE EXAMPLE
-get http://localhost:8080/time-data/
+- get http://localhost:8080/time-data/
 получить информацию из таблицы time-data
 
-get http://localhost:8080/time-converter/
+- get http://localhost:8080/time-converter/
 получить информацию из таблицы time-converter
 
-get http://localhost:8080/time-data-converter-mapping/
+- get http://localhost:8080/time-data-converter-mapping/
 получить информацию из таблицы time-data-converter-mapping
 
-get http://localhost:8080/time-devices/all
+- get http://localhost:8080/time-devices/all
 получить информацию из таблицы time-devices
