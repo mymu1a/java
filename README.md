@@ -11,6 +11,7 @@
 # USAGE EXAMPLE
 get http://localhost:8080/time-data/
 получить информацию из таблицы time-data
+
 get http://localhost:8080/time-converter/
 получить информацию из таблицы time-converter
 get http://localhost:8080/time-data-converter-mapping/
