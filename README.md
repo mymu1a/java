@@ -14,7 +14,9 @@ get http://localhost:8080/time-data/
 
 get http://localhost:8080/time-converter/
 получить информацию из таблицы time-converter
+
 get http://localhost:8080/time-data-converter-mapping/
 получить информацию из таблицы time-data-converter-mapping
+
 get http://localhost:8080/time-devices/all
 получить информацию из таблицы time-devices
