@@ -1,6 +1,8 @@
 package artur.maschenko.dateconverter.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -15,6 +17,7 @@ public class TimeConverter {
     private LocalDateTime gmtTime;
 
     @ManyToMany(mappedBy = "manyToManyTimeConverters")
+    @JsonIgnore
     private List<TimeData> manyToManyTimeDataList;
 
     // Геттеры и сеттеры

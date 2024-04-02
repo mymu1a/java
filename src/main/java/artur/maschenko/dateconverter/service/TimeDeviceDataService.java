@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -16,6 +17,12 @@ public class TimeDeviceDataService {
     @Autowired
     public TimeDeviceDataService(TimeDeviceDataRepository timeDeviceDataRepository) {
         this.timeDeviceDataRepository = timeDeviceDataRepository;
+    }
+
+    @Transactional(readOnly = true)
+    public LocalDateTime getLastDeviceTime() {
+        TimeDeviceData lastDeviceData = timeDeviceDataRepository.findTopByOrderByIdDesc();
+        return lastDeviceData != null ? lastDeviceData.getDeviceTime() : null;
     }
 
     @Transactional(readOnly = true)

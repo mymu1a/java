@@ -1,21 +1,25 @@
 package artur.maschenko.dateconverter.controllers;
 
+import artur.maschenko.dateconverter.cache.MillisecondsCache;
 import artur.maschenko.dateconverter.models.TimeData;
 import artur.maschenko.dateconverter.service.TimeDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/time-data")
 public class TimeDataController {
     private final TimeDataService timeDataService;
+    private final MillisecondsCache millisecondsCache;
 
     @Autowired
-    public TimeDataController(TimeDataService timeDataService) {
+    public TimeDataController(TimeDataService timeDataService, MillisecondsCache millisecondsCache) {
         this.timeDataService = timeDataService;
+        this.millisecondsCache = millisecondsCache;
     }
 
     // Получить все записи из таблицы TimeData
@@ -47,5 +51,29 @@ public class TimeDataController {
     @DeleteMapping("/{id}")
     public void deleteTimeData(@PathVariable Long id) {
         timeDataService.deleteTimeData(id);
+    }
+
+    // Добавить миллисекунды в кэш
+    @PostMapping("/cache")
+    public void addMillisecondsToCache(@RequestParam Long key, @RequestParam Long milliseconds) {
+        millisecondsCache.addMilliseconds(key, milliseconds);
+    }
+
+    // Получить миллисекунды из кэша
+    @GetMapping("/cache")
+    public Map<Long, Long> getAllMillisecondsFromCache() {
+        return millisecondsCache.getAllMilliseconds();
+    }
+
+    // Получить миллисекунды из кэша по ключу
+    @GetMapping("/cache/{key}")
+    public Long getMillisecondsFromCache(@PathVariable Long key) {
+        return millisecondsCache.getMilliseconds(key);
+    }
+
+    // Удалить миллисекунды из кэша по ключу
+    @DeleteMapping("/cache/{key}")
+    public void removeMillisecondsFromCache(@PathVariable Long key) {
+        millisecondsCache.removeMilliseconds(key);
     }
 }

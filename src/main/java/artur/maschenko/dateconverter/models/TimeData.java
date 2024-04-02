@@ -1,6 +1,8 @@
 package artur.maschenko.dateconverter.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+
 import java.util.List;
 
 @Entity
@@ -12,6 +14,7 @@ public class TimeData {
     private Long milliseconds;
 
     @ManyToMany(cascade = CascadeType.ALL)
+    @JsonIgnore
     @JoinTable(
             name = "time_data_converter_mapping",
             joinColumns = @JoinColumn(name = "time_data_id"),

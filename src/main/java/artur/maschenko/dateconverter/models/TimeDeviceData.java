@@ -1,6 +1,8 @@
 package artur.maschenko.dateconverter.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
 @Entity
@@ -14,6 +16,7 @@ public class TimeDeviceData {
 
     @ManyToOne
     @JoinColumn(name = "time_data_id")
+    @JsonIgnore
     private TimeData timeData;
 
     public Long getId() {

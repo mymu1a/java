@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -17,6 +18,11 @@ public class TimeDeviceDataController {
     @Autowired
     public TimeDeviceDataController(TimeDeviceDataService timeDeviceDataService) {
         this.timeDeviceDataService = timeDeviceDataService;
+    }
+
+    @GetMapping("/useful")
+    public LocalDateTime getLastDeviceTime() {
+        return timeDeviceDataService.getLastDeviceTime();
     }
 
     @GetMapping("/{id}")
