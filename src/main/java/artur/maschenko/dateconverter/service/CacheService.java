@@ -21,16 +21,14 @@ public class CacheService {
     }
 
     public Object get(String key) {
-        Object value = cache.get(key);
-        if (value == null) {
-            if ("timeData".equals(key)) {
-                value = timeDataService.getAllTimeData();
-            } else if ("maxMilliseconds".equals(key)) {
-                value = timeDataService.getMaxMilliseconds();
+        return cache.computeIfAbsent(key, k -> {
+            if ("timeData".equals(k)) {
+                return timeDataService.getAllTimeData();
+            } else if ("maxMilliseconds".equals(k)) {
+                return timeDataService.getMaxMilliseconds();
             }
-            cache.put(key, value);
-        }
-        return value;
+            return null;
+        });
     }
 
     public void remove(String key) {
