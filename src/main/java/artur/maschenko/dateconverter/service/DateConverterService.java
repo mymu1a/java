@@ -67,4 +67,8 @@ public class DateConverterService {
             throw new IllegalArgumentException("TimeConverter not found with id: " + converterId);
         }
     }
+
+    public Long getMaxMilliseconds() {
+        return timeDataRepository.findMaxMilliseconds();
+    }
 }

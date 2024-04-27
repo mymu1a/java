@@ -3,6 +3,7 @@ package artur.maschenko.dateconverter.controllers;
 import artur.maschenko.dateconverter.models.TimeData;
 import artur.maschenko.dateconverter.service.TimeDataService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -41,5 +42,11 @@ public class TimeDataController {
     @DeleteMapping("/{id}")
     public void deleteTimeData(@PathVariable Long id) {
         timeDataService.deleteTimeData(id);
+    }
+
+    @GetMapping("/useful")
+    public ResponseEntity<Long> getMaxMilliseconds() {
+        Long maxMilliseconds = timeDataService.getMaxMilliseconds();
+        return ResponseEntity.ok(maxMilliseconds);
     }
 }
