@@ -9,49 +9,96 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/** The type Time device data controller. */
 @RestController
 @RequestMapping("/time-devices")
 public class TimeDeviceDataController {
-    private final TimeDeviceDataService timeDeviceDataService;
+  private final TimeDeviceDataService timeDeviceDataService;
 
-    @Autowired
-    public TimeDeviceDataController(TimeDeviceDataService timeDeviceDataService) {
-        this.timeDeviceDataService = timeDeviceDataService;
-    }
+  /**
+   * Instantiates a new Time device data controller.
+   *
+   * @param timeDeviceDataService the time device data service
+   */
+  @Autowired
+  public TimeDeviceDataController(TimeDeviceDataService timeDeviceDataService) {
+    this.timeDeviceDataService = timeDeviceDataService;
+  }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<TimeDeviceData> getTimeDeviceDataById(@PathVariable Long id) {
-        TimeDeviceData timeDeviceData = timeDeviceDataService.getTimeDeviceDataById(id);
-        return ResponseEntity.ok().body(timeDeviceData);
-    }
+  /**
+   * Gets time device data by id.
+   *
+   * @param id the id
+   * @return the time device data by id
+   */
+  @GetMapping("/{id}")
+  public ResponseEntity<TimeDeviceData> getTimeDeviceDataById(@PathVariable Long id) {
+    TimeDeviceData timeDeviceData = timeDeviceDataService.getTimeDeviceDataById(id);
+    return ResponseEntity.ok().body(timeDeviceData);
+  }
 
-    @GetMapping("/all")
-    public ResponseEntity<List<TimeDeviceData>> getAllTimeDeviceData() {
-        List<TimeDeviceData> timeDeviceDataList = timeDeviceDataService.getAllTimeDeviceData();
-        return ResponseEntity.ok().body(timeDeviceDataList);
-    }
+  /**
+   * Gets all time device data.
+   *
+   * @return the all time device data
+   */
+  @GetMapping("/all")
+  public ResponseEntity<List<TimeDeviceData>> getAllTimeDeviceData() {
+    List<TimeDeviceData> timeDeviceDataList = timeDeviceDataService.getAllTimeDeviceData();
+    return ResponseEntity.ok().body(timeDeviceDataList);
+  }
 
-    @PostMapping("/")
-    public ResponseEntity<TimeDeviceData> saveTimeDeviceData(@RequestBody TimeDeviceData timeDeviceData) {
-        TimeDeviceData savedTimeDeviceData = timeDeviceDataService.saveTimeDeviceData(timeDeviceData);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedTimeDeviceData);
-    }
+  /**
+   * Save time device data response entity.
+   *
+   * @param timeDeviceData the time device data
+   * @return the response entity
+   */
+  @PostMapping("/")
+  public ResponseEntity<TimeDeviceData> saveTimeDeviceData(
+      @RequestBody TimeDeviceData timeDeviceData) {
+    TimeDeviceData savedTimeDeviceData = timeDeviceDataService.saveTimeDeviceData(timeDeviceData);
+    return ResponseEntity.status(HttpStatus.CREATED).body(savedTimeDeviceData);
+  }
 
-    @PostMapping("/add-to-converter/{timeConverterId}")
-    public ResponseEntity<TimeDeviceData> addToTimeConverter(@PathVariable Long timeConverterId, @RequestBody TimeDeviceData timeDeviceData) {
-        TimeDeviceData savedTimeDeviceData = timeDeviceDataService.addToTimeConverter(timeConverterId, timeDeviceData);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedTimeDeviceData);
-    }
+  /**
+   * Add to time converter response entity.
+   *
+   * @param timeConverterId the time converter id
+   * @param timeDeviceData the time device data
+   * @return the response entity
+   */
+  @PostMapping("/add-to-converter/{timeConverterId}")
+  public ResponseEntity<TimeDeviceData> addToTimeConverter(
+      @PathVariable Long timeConverterId, @RequestBody TimeDeviceData timeDeviceData) {
+    TimeDeviceData savedTimeDeviceData =
+        timeDeviceDataService.addToTimeConverter(timeConverterId, timeDeviceData);
+    return ResponseEntity.status(HttpStatus.CREATED).body(savedTimeDeviceData);
+  }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<TimeDeviceData> updateTimeDeviceData(@PathVariable Long id, @RequestBody TimeDeviceData newData) {
-        TimeDeviceData updatedTimeDeviceData = timeDeviceDataService.updateTimeDeviceData(id, newData);
-        return ResponseEntity.ok().body(updatedTimeDeviceData);
-    }
+  /**
+   * Update time device data response entity.
+   *
+   * @param id the id
+   * @param newData the new data
+   * @return the response entity
+   */
+  @PutMapping("/{id}")
+  public ResponseEntity<TimeDeviceData> updateTimeDeviceData(
+      @PathVariable Long id, @RequestBody TimeDeviceData newData) {
+    TimeDeviceData updatedTimeDeviceData = timeDeviceDataService.updateTimeDeviceData(id, newData);
+    return ResponseEntity.ok().body(updatedTimeDeviceData);
+  }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTimeDeviceData(@PathVariable Long id) {
-        timeDeviceDataService.deleteTimeDeviceData(id);
-        return ResponseEntity.noContent().build();
-    }
+  /**
+   * Delete time device data response entity.
+   *
+   * @param id the id
+   * @return the response entity
+   */
+  @DeleteMapping("/{id}")
+  public ResponseEntity<Void> deleteTimeDeviceData(@PathVariable Long id) {
+    timeDeviceDataService.deleteTimeDeviceData(id);
+    return ResponseEntity.noContent().build();
+  }
 }

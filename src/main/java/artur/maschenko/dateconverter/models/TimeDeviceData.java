@@ -6,18 +6,20 @@ import lombok.Data;
 
 import java.time.LocalDateTime;
 
+/** The type Time device data. */
 @Entity
 @Table(name = "time_device_data")
 @Data
 public class TimeDeviceData {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
-    private LocalDateTime deviceTime;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JsonIgnore
-    @JoinColumn(name = "time_converter_id")
-    private TimeConverter timeConverter;
+  private LocalDateTime deviceTime;
+
+  @ManyToOne(fetch = FetchType.EAGER)
+  @JsonIgnore
+  @JoinColumn(name = "time_converter_id")
+  private TimeConverter timeConverter;
 }

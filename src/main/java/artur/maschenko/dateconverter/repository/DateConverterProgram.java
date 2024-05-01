@@ -9,19 +9,26 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
+/** The type Date converter program. */
 @Component
 public class DateConverterProgram {
 
-    public Map<String, String> convertTime(long milliseconds) {
-        Instant instant = Instant.ofEpochMilli(milliseconds);
-        LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
-        LocalDateTime gmtDateTime = LocalDateTime.ofInstant(instant, ZoneId.of("GMT"));
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+  /**
+   * Convert time map.
+   *
+   * @param milliseconds the milliseconds
+   * @return the map
+   */
+  public Map<String, String> convertTime(long milliseconds) {
+    Instant instant = Instant.ofEpochMilli(milliseconds);
+    LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
+    LocalDateTime gmtDateTime = LocalDateTime.ofInstant(instant, ZoneId.of("GMT"));
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-        Map<String, String> result = new HashMap<>();
-        result.put("localDateTime", localDateTime.format(formatter));
-        result.put("gmtDateTime", gmtDateTime.format(formatter));
+    Map<String, String> result = new HashMap<>();
+    result.put("localDateTime", localDateTime.format(formatter));
+    result.put("gmtDateTime", gmtDateTime.format(formatter));
 
-        return result;
-    }
+    return result;
+  }
 }

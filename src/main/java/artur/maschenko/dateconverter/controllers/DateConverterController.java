@@ -8,18 +8,30 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
+/** The type Date converter controller. */
 @RestController
 public class DateConverterController {
 
-    private final DateConverterService dateConverterService;
+  private final DateConverterService dateConverterService;
 
-    @Autowired
-    public DateConverterController(DateConverterService dateConverterService) {
-        this.dateConverterService = dateConverterService;
-    }
+  /**
+   * Instantiates a new Date converter controller.
+   *
+   * @param dateConverterService the date converter service
+   */
+  @Autowired
+  public DateConverterController(DateConverterService dateConverterService) {
+    this.dateConverterService = dateConverterService;
+  }
 
-    @GetMapping("/date-convert")
-    public Map<String, String> convertTime(@RequestParam long milliseconds) {
-        return dateConverterService.convertTime(milliseconds);
-    }
+  /**
+   * Convert time map.
+   *
+   * @param milliseconds the milliseconds
+   * @return the map
+   */
+  @GetMapping("/date-convert")
+  public Map<String, String> convertTime(@RequestParam long milliseconds) {
+    return dateConverterService.convertTime(milliseconds);
+  }
 }

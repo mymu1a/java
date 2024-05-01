@@ -8,39 +8,75 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+/** The type Time converter controller. */
 @RestController
 @RequestMapping("/time-converter")
 public class TimeConverterController {
-    private final TimeConverterService timeConverterService;
+  private final TimeConverterService timeConverterService;
 
-    @Autowired
-    public TimeConverterController(TimeConverterService timeConverterService) {
-        this.timeConverterService = timeConverterService;
-    }
+  /**
+   * Instantiates a new Time converter controller.
+   *
+   * @param timeConverterService the time converter service
+   */
+  @Autowired
+  public TimeConverterController(TimeConverterService timeConverterService) {
+    this.timeConverterService = timeConverterService;
+  }
 
-    @GetMapping("/")
-    public List<TimeConverter> getAllTimeConverters() {
-        return timeConverterService.getAllTimeConverters();
-    }
+  /**
+   * Gets all time converters.
+   *
+   * @return the all time converters
+   */
+  @GetMapping("/")
+  public List<TimeConverter> getAllTimeConverters() {
+    return timeConverterService.getAllTimeConverters();
+  }
 
-    @GetMapping("/{id}")
-    public Optional<TimeConverter> getTimeConverterById(@PathVariable Long id) {
-        return timeConverterService.getTimeConverterById(id);
-    }
+  /**
+   * Gets time converter by id.
+   *
+   * @param id the id
+   * @return the time converter by id
+   */
+  @GetMapping("/{id}")
+  public Optional<TimeConverter> getTimeConverterById(@PathVariable Long id) {
+    return timeConverterService.getTimeConverterById(id);
+  }
 
-    @PostMapping("/")
-    public TimeConverter saveTimeConverter(@RequestBody TimeConverter timeConverter) {
-        return timeConverterService.saveTimeConverter(timeConverter);
-    }
+  /**
+   * Save time converter time converter.
+   *
+   * @param timeConverter the time converter
+   * @return the time converter
+   */
+  @PostMapping("/")
+  public TimeConverter saveTimeConverter(@RequestBody TimeConverter timeConverter) {
+    return timeConverterService.saveTimeConverter(timeConverter);
+  }
 
-    @PutMapping("/{id}")
-    public TimeConverter updateTimeConverter(@PathVariable Long id, @RequestBody TimeConverter timeConverter) {
-        timeConverter.setId(id);
-        return timeConverterService.saveTimeConverter(timeConverter);
-    }
+  /**
+   * Update time converter time converter.
+   *
+   * @param id the id
+   * @param timeConverter the time converter
+   * @return the time converter
+   */
+  @PutMapping("/{id}")
+  public TimeConverter updateTimeConverter(
+      @PathVariable Long id, @RequestBody TimeConverter timeConverter) {
+    timeConverter.setId(id);
+    return timeConverterService.saveTimeConverter(timeConverter);
+  }
 
-    @DeleteMapping("/{id}")
-    public void deleteTimeConverter(@PathVariable Long id) {
-        timeConverterService.deleteTimeConverter(id);
-    }
+  /**
+   * Delete time converter.
+   *
+   * @param id the id
+   */
+  @DeleteMapping("/{id}")
+  public void deleteTimeConverter(@PathVariable Long id) {
+    timeConverterService.deleteTimeConverter(id);
+  }
 }

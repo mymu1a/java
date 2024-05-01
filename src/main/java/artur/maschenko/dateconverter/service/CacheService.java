@@ -1,9 +1,17 @@
 package artur.maschenko.dateconverter.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
-
+/**
+ * The type Cache service.
+ */
+@Component
 public class CacheService {
+    private static final Logger logger = LoggerFactory.getLogger(CacheService.class);
     private final TimeDataService timeDataService;
     private final Map<String, Object> cache = new LinkedHashMap<>() {
         @Override
@@ -12,15 +20,34 @@ public class CacheService {
         }
     };
 
-    public CacheService(TimeDataService timeDataService) {
+    /**
+     * Instantiates a new Cache service.
+     *
+     * @param timeDataService the time data service
+     */
+public CacheService(TimeDataService timeDataService) {
         this.timeDataService = timeDataService;
     }
 
-    public void put(String key, Object value) {
+    /**
+     * Put.
+     *
+     * @param key the key
+     * @param value the value
+     */
+public void put(String key, Object value) {
         cache.put(key, value);
+        logger.info("Put key '{}' into cache", key);
     }
 
-    public Object get(String key) {
+    /**
+     * Get object.
+     *
+     * @param key the key
+     * @return the object
+     */
+public Object get(String key) {
+        logger.info("Getting value for key '{}' from cache", key);
         return cache.computeIfAbsent(key, k -> {
             if ("timeData".equals(k)) {
                 return timeDataService.getAllTimeData();
@@ -31,11 +58,24 @@ public class CacheService {
         });
     }
 
-    public void remove(String key) {
+    /**
+     * Remove.
+     *
+     * @param key the key
+     */
+public void remove(String key) {
+        logger.info("Removing key '{}' from cache", key);
         cache.remove(key);
     }
 
-    public boolean containsKey(String key) {
+    /**
+     * Contains key boolean.
+     *
+     * @param key the key
+     * @return the boolean
+     */
+public boolean containsKey(String key) {
+        logger.info("Checking if cache contains key '{}'", key);
         return cache.containsKey(key);
     }
 }

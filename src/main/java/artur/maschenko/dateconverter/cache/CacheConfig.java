@@ -6,17 +6,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/** The type Cache artur.maschenko.dateconverter.config. */
 @Configuration
 public class CacheConfig {
-    private final TimeDataService timeDataService;
+  private final TimeDataService timeDataService;
 
-    @Autowired
-    public CacheConfig(TimeDataService timeDataService) {
-        this.timeDataService = timeDataService;
-    }
+  /**
+   * Instantiates a new Cache artur.maschenko.dateconverter.config.
+   *
+   * @param timeDataService the time data service
+   */
+  @Autowired
+  public CacheConfig(TimeDataService timeDataService) {
+    this.timeDataService = timeDataService;
+  }
 
-    @Bean
-    public CacheService cacheService() {
-        return new CacheService(timeDataService);
-    }
+  /**
+   * Cache service.
+   *
+   * @return the cache service
+   */
+  @Bean
+  public CacheService cacheService() {
+    return new CacheService(timeDataService);
+  }
 }
