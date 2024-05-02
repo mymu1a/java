@@ -1,4 +1,4 @@
-package artur.maschenko.dateconverter.controllers;
+package artur.maschenko.dateconverter.models.controllers;
 
 import artur.maschenko.dateconverter.service.DateConverterService;
 import org.springframework.beans.factory.annotation.Autowired;

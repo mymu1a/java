@@ -1,4 +1,4 @@
-package artur.maschenko.dateconverter.controllers;
+package artur.maschenko.dateconverter.models.controllers;
 
 import artur.maschenko.dateconverter.models.TimeConverter;
 import artur.maschenko.dateconverter.service.TimeConverterService;

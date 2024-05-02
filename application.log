@@ -1371,3 +1371,517 @@ Correct the classpath of your application so that it contains compatible version
 2024-04-30 13:37:12.885 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-04-30 13:37:12.887 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-04-30 13:37:12.893 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-02 11:06:33.507 [main] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 1: TimeDeviceData(id=null, deviceTime=null, timeConverter=TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null))
+2024-05-02 11:06:33.609 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting time device data by ID: 1
+2024-05-02 11:06:33.614 [main] INFO  a.m.d.service.TimeDeviceDataService - Updating time device data with ID 1: TimeDeviceData(id=1, deviceTime=2024-05-02T11:06:33.613038100, timeConverter=null)
+2024-05-02 11:06:33.619 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-02 11:06:33.621 [main] INFO  a.m.d.service.TimeDeviceDataService - Deleting time device data with ID: 1
+2024-05-02 11:06:33.623 [main] INFO  a.m.d.service.TimeDeviceDataService - Saving time device data: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 11:06:33.723 [main] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 11:06:33.727 [main] INFO  a.m.d.service.TimeConverterService - Deleting time converter with ID: 1
+2024-05-02 11:06:33.730 [main] INFO  a.m.d.service.TimeConverterService - Updating time converter with ID 1: TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:06:33.732 [main] INFO  a.m.d.service.TimeConverterService - Getting time converter by ID: 1
+2024-05-02 11:06:33.735 [main] INFO  a.m.d.service.TimeConverterService - Saving time converter: TimeConverter(id=null, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:06:33.808 [main] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 1620237600000
+2024-05-02 11:06:33.859 [main] INFO  a.m.d.service.DateConverterService - Adding device time to converter with ID: 1
+2024-05-02 11:06:33.955 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:06:33.955 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:06:33.962 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:06:33.962 [main] INFO  a.m.d.service.CacheService - Removing key 'testKey' from cache
+2024-05-02 11:06:33.962 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:06:33.996 [main] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 1
+2024-05-02 11:06:34.001 [main] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 1
+2024-05-02 11:06:34.005 [main] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-02 11:06:34.013 [main] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-02 11:06:34.016 [main] INFO  a.m.d.service.TimeDataService - Updating time data with ID 1: TimeData(id=1, milliseconds=null)
+2024-05-02 11:16:29.401 [main] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 1: TimeDeviceData(id=null, deviceTime=null, timeConverter=TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null))
+2024-05-02 11:16:29.469 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting time device data by ID: 1
+2024-05-02 11:16:29.475 [main] INFO  a.m.d.service.TimeDeviceDataService - Updating time device data with ID 1: TimeDeviceData(id=1, deviceTime=2024-05-02T11:16:29.474452300, timeConverter=null)
+2024-05-02 11:16:29.480 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-02 11:16:29.483 [main] INFO  a.m.d.service.TimeDeviceDataService - Deleting time device data with ID: 1
+2024-05-02 11:16:29.486 [main] INFO  a.m.d.service.TimeDeviceDataService - Saving time device data: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 11:16:29.573 [main] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 11:16:29.579 [main] INFO  a.m.d.service.TimeConverterService - Deleting time converter with ID: 1
+2024-05-02 11:16:29.582 [main] INFO  a.m.d.service.TimeConverterService - Updating time converter with ID 1: TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:16:29.585 [main] INFO  a.m.d.service.TimeConverterService - Getting time converter by ID: 1
+2024-05-02 11:16:29.588 [main] INFO  a.m.d.service.TimeConverterService - Saving time converter: TimeConverter(id=null, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:16:29.665 [main] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 1620237600000
+2024-05-02 11:16:29.669 [main] INFO  a.m.d.service.DateConverterService - Adding device time to converter with ID: 1
+2024-05-02 11:16:29.734 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:16:29.735 [main] INFO  a.m.d.service.CacheService - Getting value for key 'testKey' from cache
+2024-05-02 11:16:29.743 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:16:29.744 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:16:29.754 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:16:29.754 [main] INFO  a.m.d.service.CacheService - Removing key 'testKey' from cache
+2024-05-02 11:16:29.754 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:16:29.769 [main] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=null)
+2024-05-02 11:16:29.780 [main] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 1
+2024-05-02 11:16:29.783 [main] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 1
+2024-05-02 11:16:29.789 [main] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-02 11:16:29.795 [main] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-02 11:16:29.798 [main] INFO  a.m.d.service.TimeDataService - Updating time data with ID 1: TimeData(id=1, milliseconds=null)
+2024-05-02 11:30:00.583 [main] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 1: TimeDeviceData(id=null, deviceTime=null, timeConverter=TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null))
+2024-05-02 11:30:00.681 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting time device data by ID: 1
+2024-05-02 11:30:00.687 [main] INFO  a.m.d.service.TimeDeviceDataService - Updating time device data with ID 1: TimeDeviceData(id=1, deviceTime=2024-05-02T11:30:00.686046600, timeConverter=null)
+2024-05-02 11:30:00.692 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-02 11:30:00.695 [main] INFO  a.m.d.service.TimeDeviceDataService - Deleting time device data with ID: 1
+2024-05-02 11:30:00.697 [main] INFO  a.m.d.service.TimeDeviceDataService - Saving time device data: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 11:30:00.810 [main] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 11:30:00.818 [main] INFO  a.m.d.service.TimeConverterService - Deleting time converter with ID: 1
+2024-05-02 11:30:00.825 [main] INFO  a.m.d.service.TimeConverterService - Updating time converter with ID 1: TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:30:00.828 [main] INFO  a.m.d.service.TimeConverterService - Getting time converter by ID: 1
+2024-05-02 11:30:00.831 [main] INFO  a.m.d.service.TimeConverterService - Saving time converter: TimeConverter(id=null, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:30:00.900 [main] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 1620237600000
+2024-05-02 11:30:00.905 [main] INFO  a.m.d.service.DateConverterService - Adding device time to converter with ID: 1
+2024-05-02 11:30:00.980 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:30:00.981 [main] INFO  a.m.d.service.CacheService - Getting value for key 'testKey' from cache
+2024-05-02 11:30:00.987 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:30:00.987 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:30:00.994 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:30:00.994 [main] INFO  a.m.d.service.CacheService - Removing key 'testKey' from cache
+2024-05-02 11:30:00.994 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:30:01.006 [main] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=null)
+2024-05-02 11:30:01.015 [main] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 1
+2024-05-02 11:30:01.019 [main] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 1
+2024-05-02 11:30:01.022 [main] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-02 11:30:01.027 [main] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-02 11:30:01.030 [main] INFO  a.m.d.service.TimeDataService - Updating time data with ID 1: TimeData(id=1, milliseconds=null)
+2024-05-02 11:41:21.514 [main] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 1: TimeDeviceData(id=null, deviceTime=null, timeConverter=TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null))
+2024-05-02 11:41:21.562 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting time device data by ID: 1
+2024-05-02 11:41:21.567 [main] INFO  a.m.d.service.TimeDeviceDataService - Updating time device data with ID 1: TimeDeviceData(id=1, deviceTime=2024-05-02T11:41:21.566165900, timeConverter=null)
+2024-05-02 11:41:21.573 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-02 11:41:21.576 [main] INFO  a.m.d.service.TimeDeviceDataService - Deleting time device data with ID: 1
+2024-05-02 11:41:21.579 [main] INFO  a.m.d.service.TimeDeviceDataService - Saving time device data: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 11:41:21.664 [main] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 11:41:21.667 [main] INFO  a.m.d.service.TimeConverterService - Deleting time converter with ID: 1
+2024-05-02 11:41:21.670 [main] INFO  a.m.d.service.TimeConverterService - Updating time converter with ID 1: TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:41:21.673 [main] INFO  a.m.d.service.TimeConverterService - Getting time converter by ID: 1
+2024-05-02 11:41:21.675 [main] INFO  a.m.d.service.TimeConverterService - Saving time converter: TimeConverter(id=null, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:41:21.759 [main] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 1620237600000
+2024-05-02 11:41:21.767 [main] INFO  a.m.d.service.DateConverterService - Adding device time to converter with ID: 1
+2024-05-02 11:41:21.831 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:41:21.832 [main] INFO  a.m.d.service.CacheService - Getting value for key 'testKey' from cache
+2024-05-02 11:41:21.839 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:41:21.839 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:41:21.848 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:41:21.848 [main] INFO  a.m.d.service.CacheService - Removing key 'testKey' from cache
+2024-05-02 11:41:21.848 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:41:21.858 [main] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=null)
+2024-05-02 11:41:21.862 [main] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 1
+2024-05-02 11:41:21.865 [main] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 1
+2024-05-02 11:41:21.869 [main] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-02 11:41:21.873 [main] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-02 11:41:21.876 [main] INFO  a.m.d.service.TimeDataService - Updating time data with ID 1: TimeData(id=1, milliseconds=null)
+2024-05-02 11:43:08.430 [main] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 1: TimeDeviceData(id=null, deviceTime=null, timeConverter=TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null))
+2024-05-02 11:43:08.632 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting time device data by ID: 1
+2024-05-02 11:43:08.637 [main] INFO  a.m.d.service.TimeDeviceDataService - Updating time device data with ID 1: TimeDeviceData(id=1, deviceTime=2024-05-02T11:43:08.637125900, timeConverter=null)
+2024-05-02 11:43:08.643 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-02 11:43:08.646 [main] INFO  a.m.d.service.TimeDeviceDataService - Deleting time device data with ID: 1
+2024-05-02 11:43:08.649 [main] INFO  a.m.d.service.TimeDeviceDataService - Saving time device data: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 11:43:08.734 [main] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 11:43:08.737 [main] INFO  a.m.d.service.TimeConverterService - Deleting time converter with ID: 1
+2024-05-02 11:43:08.740 [main] INFO  a.m.d.service.TimeConverterService - Updating time converter with ID 1: TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:43:08.744 [main] INFO  a.m.d.service.TimeConverterService - Getting time converter by ID: 1
+2024-05-02 11:43:08.751 [main] INFO  a.m.d.service.TimeConverterService - Saving time converter: TimeConverter(id=null, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:43:08.837 [main] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 1620237600000
+2024-05-02 11:43:08.849 [main] INFO  a.m.d.service.DateConverterService - Adding device time to converter with ID: 1
+2024-05-02 11:43:08.925 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:43:08.925 [main] INFO  a.m.d.service.CacheService - Getting value for key 'testKey' from cache
+2024-05-02 11:43:08.933 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:43:08.934 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:43:08.943 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:43:08.943 [main] INFO  a.m.d.service.CacheService - Removing key 'testKey' from cache
+2024-05-02 11:43:08.943 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:43:08.965 [main] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=null)
+2024-05-02 11:43:08.979 [main] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 1
+2024-05-02 11:43:08.985 [main] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 1
+2024-05-02 11:43:08.988 [main] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-02 11:43:08.991 [main] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-02 11:43:08.995 [main] INFO  a.m.d.service.TimeDataService - Updating time data with ID 1: TimeData(id=1, milliseconds=null)
+2024-05-02 11:44:00.778 [main] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 1: TimeDeviceData(id=null, deviceTime=null, timeConverter=TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null))
+2024-05-02 11:44:00.887 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting time device data by ID: 1
+2024-05-02 11:44:00.893 [main] INFO  a.m.d.service.TimeDeviceDataService - Updating time device data with ID 1: TimeDeviceData(id=1, deviceTime=2024-05-02T11:44:00.892325800, timeConverter=null)
+2024-05-02 11:44:00.900 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-02 11:44:00.905 [main] INFO  a.m.d.service.TimeDeviceDataService - Deleting time device data with ID: 1
+2024-05-02 11:44:00.909 [main] INFO  a.m.d.service.TimeDeviceDataService - Saving time device data: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 11:44:00.986 [main] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 11:44:00.988 [main] INFO  a.m.d.service.TimeConverterService - Deleting time converter with ID: 1
+2024-05-02 11:44:00.995 [main] INFO  a.m.d.service.TimeConverterService - Updating time converter with ID 1: TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:44:00.998 [main] INFO  a.m.d.service.TimeConverterService - Getting time converter by ID: 1
+2024-05-02 11:44:01.001 [main] INFO  a.m.d.service.TimeConverterService - Saving time converter: TimeConverter(id=null, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:44:01.063 [main] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 1620237600000
+2024-05-02 11:44:01.069 [main] INFO  a.m.d.service.DateConverterService - Adding device time to converter with ID: 1
+2024-05-02 11:44:01.117 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:44:01.117 [main] INFO  a.m.d.service.CacheService - Getting value for key 'testKey' from cache
+2024-05-02 11:44:01.126 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:44:01.126 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:44:01.131 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:44:01.131 [main] INFO  a.m.d.service.CacheService - Removing key 'testKey' from cache
+2024-05-02 11:44:01.131 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:44:01.150 [main] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=null)
+2024-05-02 11:44:01.155 [main] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 1
+2024-05-02 11:44:01.162 [main] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 1
+2024-05-02 11:44:01.165 [main] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-02 11:44:01.172 [main] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-02 11:44:01.175 [main] INFO  a.m.d.service.TimeDataService - Updating time data with ID 1: TimeData(id=1, milliseconds=null)
+2024-05-02 11:49:59.566 [main] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 1: TimeDeviceData(id=null, deviceTime=null, timeConverter=TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null))
+2024-05-02 11:49:59.662 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting time device data by ID: 1
+2024-05-02 11:49:59.669 [main] INFO  a.m.d.service.TimeDeviceDataService - Updating time device data with ID 1: TimeDeviceData(id=1, deviceTime=2024-05-02T11:49:59.668857400, timeConverter=null)
+2024-05-02 11:49:59.674 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-02 11:49:59.678 [main] INFO  a.m.d.service.TimeDeviceDataService - Deleting time device data with ID: 1
+2024-05-02 11:49:59.681 [main] INFO  a.m.d.service.TimeDeviceDataService - Saving time device data: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 11:49:59.789 [main] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 11:49:59.791 [main] INFO  a.m.d.service.TimeConverterService - Deleting time converter with ID: 1
+2024-05-02 11:49:59.794 [main] INFO  a.m.d.service.TimeConverterService - Updating time converter with ID 1: TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:49:59.796 [main] INFO  a.m.d.service.TimeConverterService - Getting time converter by ID: 1
+2024-05-02 11:49:59.798 [main] INFO  a.m.d.service.TimeConverterService - Saving time converter: TimeConverter(id=null, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:49:59.888 [main] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 1620237600000
+2024-05-02 11:49:59.894 [main] INFO  a.m.d.service.DateConverterService - Adding device time to converter with ID: 1
+2024-05-02 11:49:59.979 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:49:59.980 [main] INFO  a.m.d.service.CacheService - Getting value for key 'testKey' from cache
+2024-05-02 11:49:59.987 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:49:59.987 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:49:59.997 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:49:59.997 [main] INFO  a.m.d.service.CacheService - Removing key 'testKey' from cache
+2024-05-02 11:49:59.997 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:50:00.013 [main] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=null)
+2024-05-02 11:50:00.021 [main] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 1
+2024-05-02 11:50:00.024 [main] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 1
+2024-05-02 11:50:00.030 [main] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-02 11:50:00.033 [main] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-02 11:50:00.037 [main] INFO  a.m.d.service.TimeDataService - Updating time data with ID 1: TimeData(id=1, milliseconds=null)
+2024-05-02 11:53:30.358 [main] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 1: TimeDeviceData(id=null, deviceTime=null, timeConverter=TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null))
+2024-05-02 11:53:30.447 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting time device data by ID: 1
+2024-05-02 11:53:30.452 [main] INFO  a.m.d.service.TimeDeviceDataService - Updating time device data with ID 1: TimeDeviceData(id=1, deviceTime=2024-05-02T11:53:30.451656300, timeConverter=null)
+2024-05-02 11:53:30.458 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-02 11:53:30.460 [main] INFO  a.m.d.service.TimeDeviceDataService - Deleting time device data with ID: 1
+2024-05-02 11:53:30.463 [main] INFO  a.m.d.service.TimeDeviceDataService - Saving time device data: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 11:53:30.540 [main] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 11:53:30.543 [main] INFO  a.m.d.service.TimeConverterService - Deleting time converter with ID: 1
+2024-05-02 11:53:30.546 [main] INFO  a.m.d.service.TimeConverterService - Updating time converter with ID 1: TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:53:30.550 [main] INFO  a.m.d.service.TimeConverterService - Getting time converter by ID: 1
+2024-05-02 11:53:30.553 [main] INFO  a.m.d.service.TimeConverterService - Saving time converter: TimeConverter(id=null, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:53:30.632 [main] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 1620237600000
+2024-05-02 11:53:30.639 [main] INFO  a.m.d.service.DateConverterService - Adding device time to converter with ID: 1
+2024-05-02 11:53:30.710 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:53:30.711 [main] INFO  a.m.d.service.CacheService - Getting value for key 'testKey' from cache
+2024-05-02 11:53:30.719 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:53:30.719 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:53:30.728 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:53:30.728 [main] INFO  a.m.d.service.CacheService - Removing key 'testKey' from cache
+2024-05-02 11:53:30.728 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:53:30.742 [main] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=null)
+2024-05-02 11:53:30.747 [main] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 1
+2024-05-02 11:53:30.752 [main] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 1
+2024-05-02 11:53:30.756 [main] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-02 11:53:30.761 [main] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-02 11:53:30.764 [main] INFO  a.m.d.service.TimeDataService - Updating time data with ID 1: TimeData(id=1, milliseconds=null)
+2024-05-02 11:53:44.665 [main] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 1: TimeDeviceData(id=null, deviceTime=null, timeConverter=TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null))
+2024-05-02 11:53:44.744 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting time device data by ID: 1
+2024-05-02 11:53:44.748 [main] INFO  a.m.d.service.TimeDeviceDataService - Updating time device data with ID 1: TimeDeviceData(id=1, deviceTime=2024-05-02T11:53:44.748215, timeConverter=null)
+2024-05-02 11:53:44.753 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-02 11:53:44.755 [main] INFO  a.m.d.service.TimeDeviceDataService - Deleting time device data with ID: 1
+2024-05-02 11:53:44.758 [main] INFO  a.m.d.service.TimeDeviceDataService - Saving time device data: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 11:53:44.832 [main] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 11:53:44.835 [main] INFO  a.m.d.service.TimeConverterService - Deleting time converter with ID: 1
+2024-05-02 11:53:44.838 [main] INFO  a.m.d.service.TimeConverterService - Updating time converter with ID 1: TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:53:44.841 [main] INFO  a.m.d.service.TimeConverterService - Getting time converter by ID: 1
+2024-05-02 11:53:44.843 [main] INFO  a.m.d.service.TimeConverterService - Saving time converter: TimeConverter(id=null, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-02 11:53:44.922 [main] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 1620237600000
+2024-05-02 11:53:44.927 [main] INFO  a.m.d.service.DateConverterService - Adding device time to converter with ID: 1
+2024-05-02 11:53:45.002 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:53:45.002 [main] INFO  a.m.d.service.CacheService - Getting value for key 'testKey' from cache
+2024-05-02 11:53:45.009 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:53:45.010 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:53:45.017 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-02 11:53:45.017 [main] INFO  a.m.d.service.CacheService - Removing key 'testKey' from cache
+2024-05-02 11:53:45.017 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-02 11:53:45.028 [main] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=null)
+2024-05-02 11:53:45.033 [main] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 1
+2024-05-02 11:53:45.036 [main] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 1
+2024-05-02 11:53:45.041 [main] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-02 11:53:45.045 [main] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-02 11:53:45.048 [main] INFO  a.m.d.service.TimeDataService - Updating time data with ID 1: TimeData(id=1, milliseconds=null)
+2024-05-02 11:59:30.363 [restartedMain] INFO  a.m.d.DateConverterApplication - Starting DateConverterApplication using Java 22 with PID 1704 (C:\projects\java\DateConverter\target\classes started by Alex in C:\projects\java\DateConverter)
+2024-05-02 11:59:30.365 [restartedMain] INFO  a.m.d.DateConverterApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-02 11:59:30.420 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-02 11:59:30.421 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-02 11:59:31.145 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-02 11:59:31.195 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 3 JPA repository interfaces.
+2024-05-02 11:59:31.704 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-05-02 11:59:31.712 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-02 11:59:31.714 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-02 11:59:31.714 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-05-02 11:59:31.754 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-02 11:59:31.754 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1333 ms
+2024-05-02 11:59:31.855 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-02 11:59:31.902 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-02 11:59:31.935 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-02 11:59:32.099 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-02 11:59:32.114 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-02 11:59:32.224 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65f208dd
+2024-05-02 11:59:32.226 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-02 11:59:32.254 [restartedMain] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.6.51 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-02 11:59:32.880 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-02 11:59:32.943 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 11:59:33.125 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-02 11:59:33.515 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-02 11:59:34.291 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-05-02 11:59:34.307 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-02 11:59:34.320 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-05-02 11:59:34.329 [restartedMain] INFO  a.m.d.DateConverterApplication - Started DateConverterApplication in 4.312 seconds (process running for 5.176)
+2024-05-02 12:00:06.917 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 12:00:06.917 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-02 12:00:06.923 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-02 12:00:14.237 [restartedMain] INFO  a.m.d.DateConverterApplication - Starting DateConverterApplication using Java 22 with PID 14880 (C:\projects\java\DateConverter\target\classes started by Alex in C:\projects\java\DateConverter)
+2024-05-02 12:00:14.239 [restartedMain] INFO  a.m.d.DateConverterApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-02 12:00:14.284 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-02 12:00:14.285 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-02 12:00:14.905 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-02 12:00:14.946 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+2024-05-02 12:00:15.387 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-05-02 12:00:15.396 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-02 12:00:15.397 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-02 12:00:15.397 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-05-02 12:00:15.428 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-02 12:00:15.429 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1144 ms
+2024-05-02 12:00:15.508 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-02 12:00:15.533 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-02 12:00:15.550 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-02 12:00:15.688 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-02 12:00:15.702 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-02 12:00:15.776 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67807b8d
+2024-05-02 12:00:15.777 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-02 12:00:15.802 [restartedMain] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.6.51 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-02 12:00:16.348 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-02 12:00:16.402 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 12:00:16.545 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-02 12:00:16.924 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-02 12:00:17.581 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-05-02 12:00:17.597 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-02 12:00:17.608 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-05-02 12:00:17.614 [restartedMain] INFO  a.m.d.DateConverterApplication - Started DateConverterApplication in 3.745 seconds (process running for 4.597)
+2024-05-02 12:00:24.800 [http-nio-8080-exec-9] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-02 12:00:24.801 [http-nio-8080-exec-9] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-02 12:00:24.802 [http-nio-8080-exec-9] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-05-02 12:00:24.871 [http-nio-8080-exec-9] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=1, milliseconds=1000)
+2024-05-02 12:00:24.943 [http-nio-8080-exec-9] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=2, milliseconds=2000)
+2024-05-02 12:00:24.950 [http-nio-8080-exec-9] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=3, milliseconds=3000)
+2024-05-02 12:00:44.471 [http-nio-8080-exec-3] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-02 12:00:53.003 [http-nio-8080-exec-4] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 12:01:09.594 [http-nio-8080-exec-5] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "."
+2024-05-02 12:01:09.596 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "."]
+2024-05-02 12:01:44.153 [http-nio-8080-exec-6] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unexpected character ('f' (code 102)): was expecting comma to separate Object entries
+2024-05-02 12:01:44.154 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('f' (code 102)): was expecting comma to separate Object entries]
+2024-05-02 12:01:51.757 [http-nio-8080-exec-8] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=2024-04-19T15:30:06, timeConverter=null)
+2024-05-02 12:02:03.339 [http-nio-8080-exec-10] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unrecognized token 'f': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+2024-05-02 12:02:03.340 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'f': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2024-05-02 12:03:18.274 [http-nio-8080-exec-9] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 12:03:26.493 [http-nio-8080-exec-3] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2024-04-19T15:30:06f": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2024-04-19T15:30:06f' could not be parsed, unparsed text found at index 19
+2024-05-02 12:03:26.494 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "2024-04-19T15:30:06f": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text '2024-04-19T15:30:06f' could not be parsed, unparsed text found at index 19]
+2024-05-02 12:03:30.617 [http-nio-8080-exec-4] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unexpected character ('f' (code 102)): was expecting comma to separate Object entries
+2024-05-02 12:03:30.618 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('f' (code 102)): was expecting comma to separate Object entries]
+2024-05-02 12:03:36.194 [http-nio-8080-exec-6] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unexpected character ('f' (code 102)): was expecting comma to separate Object entries
+2024-05-02 12:03:36.196 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('f' (code 102)): was expecting comma to separate Object entries]
+2024-05-02 12:03:44.162 [http-nio-8080-exec-8] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unrecognized token 'fhdrstkmdtrkmdtyj': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+2024-05-02 12:03:44.164 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'fhdrstkmdtrkmdtyj': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')]
+2024-05-02 12:03:54.677 [http-nio-8080-exec-1] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 12:04:04.746 [http-nio-8080-exec-9] ERROR a.m.d.c.ErrorControllerAdvice - Method not allowed: Request method 'GET' is not supported
+2024-05-02 12:04:04.748 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-05-02 12:04:29.968 [http-nio-8080-exec-3] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Content-Type 'application/x-msdownload;charset=UTF-8' is not supported
+2024-05-02 12:04:29.969 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/x-msdownload;charset=UTF-8' is not supported]
+2024-05-02 12:06:05.103 [http-nio-8080-exec-4] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "565656565659bsdtb"
+2024-05-02 12:06:05.105 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "565656565659bsdtb"]
+2024-05-02 12:07:16.382 [http-nio-8080-exec-7] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "ggg": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text 'ggg' could not be parsed at index 0
+2024-05-02 12:07:16.383 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDateTime` from String "ggg": Failed to deserialize java.time.LocalDateTime: (java.time.format.DateTimeParseException) Text 'ggg' could not be parsed at index 0]
+2024-05-02 12:07:33.428 [http-nio-8080-exec-8] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 12:08:00.627 [http-nio-8080-exec-10] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "2.2"
+2024-05-02 12:08:00.665 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "2.2"]
+2024-05-02 12:08:04.314 [http-nio-8080-exec-9] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 12:08:14.511 [http-nio-8080-exec-3] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=2024-04-19T15:30:06, timeConverter=null)
+2024-05-02 12:08:23.903 [http-nio-8080-exec-5] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Required request body is missing: public org.springframework.http.ResponseEntity<artur.maschenko.dateconverter.models.TimeDeviceData> artur.maschenko.dateconverter.controllers.TimeDeviceDataController.addToTimeConverter(java.lang.Long,artur.maschenko.dateconverter.models.TimeDeviceData)
+2024-05-02 12:08:23.905 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<artur.maschenko.dateconverter.models.TimeDeviceData> artur.maschenko.dateconverter.controllers.TimeDeviceDataController.addToTimeConverter(java.lang.Long,artur.maschenko.dateconverter.models.TimeDeviceData)]
+2024-05-02 12:11:46.249 [http-nio-8080-exec-6] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=1, milliseconds=null)
+2024-05-02 12:11:46.260 [http-nio-8080-exec-6] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=2, milliseconds=2000)
+2024-05-02 12:11:46.262 [http-nio-8080-exec-6] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=3, milliseconds=3000)
+2024-05-02 12:11:53.903 [http-nio-8080-exec-7] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unexpected character ('{' (code 123)): was expecting double-quote to start field name
+2024-05-02 12:11:53.904 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('{' (code 123)): was expecting double-quote to start field name]
+2024-05-02 12:11:59.345 [http-nio-8080-exec-8] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=1, milliseconds=1000)
+2024-05-02 12:11:59.356 [http-nio-8080-exec-8] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=2, milliseconds=2000)
+2024-05-02 12:11:59.359 [http-nio-8080-exec-8] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=3, milliseconds=3000)
+2024-05-02 12:12:06.480 [http-nio-8080-exec-10] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=1000)
+2024-05-02 12:12:06.490 [http-nio-8080-exec-10] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=2, milliseconds=2000)
+2024-05-02 12:12:06.494 [http-nio-8080-exec-10] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=3, milliseconds=3000)
+2024-05-02 12:12:19.497 [http-nio-8080-exec-1] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=1000)
+2024-05-02 12:12:19.506 [http-nio-8080-exec-1] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=2000)
+2024-05-02 12:12:19.510 [http-nio-8080-exec-1] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=3000)
+2024-05-02 12:12:32.993 [http-nio-8080-exec-9] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unexpected character ('m' (code 109)): was expecting double-quote to start field name
+2024-05-02 12:12:32.994 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('m' (code 109)): was expecting double-quote to start field name]
+2024-05-02 12:13:21.665 [http-nio-8080-exec-5] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=2024-04-19T15:30:06, timeConverter=null)
+2024-05-02 12:13:34.339 [http-nio-8080-exec-4] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 4: TimeDeviceData(id=null, deviceTime=2024-04-19T15:30:06, timeConverter=null)
+2024-05-02 12:13:34.370 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1452, SQLState: 23000
+2024-05-02 12:13:34.370 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Cannot add or update a child row: a foreign key constraint fails (`dateconverterdb`.`time_device_data`, CONSTRAINT `FKg1cp3fy65iwo6gfpx6tacclq2` FOREIGN KEY (`time_converter_id`) REFERENCES `time_converter` (`id`))
+2024-05-02 12:13:34.376 [http-nio-8080-exec-4] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: could not execute statement [Cannot add or update a child row: a foreign key constraint fails (`dateconverterdb`.`time_device_data`, CONSTRAINT `FKg1cp3fy65iwo6gfpx6tacclq2` FOREIGN KEY (`time_converter_id`) REFERENCES `time_converter` (`id`))] [insert into time_device_data (device_time,time_converter_id) values (?,?)]; SQL [insert into time_device_data (device_time,time_converter_id) values (?,?)]; constraint [null]
+2024-05-02 12:13:34.377 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Cannot add or update a child row: a foreign key constraint fails (`dateconverterdb`.`time_device_data`, CONSTRAINT `FKg1cp3fy65iwo6gfpx6tacclq2` FOREIGN KEY (`time_converter_id`) REFERENCES `time_converter` (`id`))] [insert into time_device_data (device_time,time_converter_id) values (?,?)]; SQL [insert into time_device_data (device_time,time_converter_id) values (?,?)]; constraint [null]]
+2024-05-02 12:13:42.795 [http-nio-8080-exec-7] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: No static resource time-devices/add-to-nverter/2.
+2024-05-02 12:13:42.795 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource time-devices/add-to-nverter/2.]
+2024-05-02 12:13:56.563 [http-nio-8080-exec-8] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 12:14:06.849 [http-nio-8080-exec-10] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 12:14:15.972 [http-nio-8080-exec-1] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: No static resource time-devices/add-to-converter.
+2024-05-02 12:14:15.972 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource time-devices/add-to-converter.]
+2024-05-02 12:14:54.953 [http-nio-8080-exec-3] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "56565656565o9"
+2024-05-02 12:14:54.953 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "56565656565o9"]
+2024-05-02 12:14:59.492 [http-nio-8080-exec-4] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: -565656565659
+2024-05-02 12:15:04.397 [http-nio-8080-exec-6] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "565656dzrulj565659"
+2024-05-02 12:15:04.398 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "565656dzrulj565659"]
+2024-05-02 12:15:08.864 [http-nio-8080-exec-2] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "56565656565900000000000000000000"
+2024-05-02 12:15:08.865 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "56565656565900000000000000000000"]
+2024-05-02 12:15:16.890 [http-nio-8080-exec-10] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "565656565659uytrfghu765r4f"
+2024-05-02 12:15:16.890 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "565656565659uytrfghu765r4f"]
+2024-05-02 12:15:26.480 [http-nio-8080-exec-9] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 12:15:36.042 [http-nio-8080-exec-3] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-02 12:16:48.873 [http-nio-8080-exec-4] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt565656565659"
+2024-05-02 12:16:48.874 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt565656565659"]
+2024-05-02 12:17:00.953 [http-nio-8080-exec-2] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 11
+2024-05-02 12:17:09.922 [http-nio-8080-exec-8] ERROR a.m.d.c.ErrorControllerAdvice - Method not allowed: Request method 'POST' is not supported
+2024-05-02 12:17:09.922 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-05-02 12:17:15.244 [http-nio-8080-exec-10] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-02 12:17:22.233 [http-nio-8080-exec-1] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "useful."
+2024-05-02 12:17:22.234 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "useful."]
+2024-05-02 12:17:27.893 [http-nio-8080-exec-3] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-02 12:17:39.591 [http-nio-8080-exec-5] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-02 12:17:46.383 [http-nio-8080-exec-6] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-02 12:17:53.049 [http-nio-8080-exec-4] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-02 12:17:58.319 [http-nio-8080-exec-7] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 4
+2024-05-02 12:18:03.856 [http-nio-8080-exec-2] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 4
+2024-05-02 12:18:09.338 [http-nio-8080-exec-8] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 40
+2024-05-02 12:18:26.106 [http-nio-8080-exec-10] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "."
+2024-05-02 12:18:26.107 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "."]
+2024-05-02 12:18:31.161 [http-nio-8080-exec-9] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "."
+2024-05-02 12:18:31.161 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "."]
+2024-05-02 12:18:34.576 [http-nio-8080-exec-5] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 9
+2024-05-02 12:18:37.952 [http-nio-8080-exec-6] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 9
+2024-05-02 12:18:41.932 [http-nio-8080-exec-4] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 90
+2024-05-02 12:18:57.228 [http-nio-8080-exec-7] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt565656565659"
+2024-05-02 12:18:57.228 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt565656565659"]
+2024-05-02 12:19:08.635 [http-nio-8080-exec-8] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Required request parameter 'milliseconds' for method parameter type long is not present
+2024-05-02 12:19:08.635 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'milliseconds' for method parameter type long is not present]
+2024-05-02 12:19:31.642 [http-nio-8080-exec-1] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: No static resource datte-convert.
+2024-05-02 12:19:31.643 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource datte-convert.]
+2024-05-02 12:19:35.002 [http-nio-8080-exec-3] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: No static resource date-contvert.
+2024-05-02 12:19:35.003 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource date-contvert.]
+2024-05-02 12:19:39.603 [http-nio-8080-exec-6] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: No static resource date-convertmilliseconds=565656565659.
+2024-05-02 12:19:39.604 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource date-convertmilliseconds=565656565659.]
+2024-05-02 12:19:42.334 [http-nio-8080-exec-7] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: No static resource date-convertt.
+2024-05-02 12:19:42.335 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource date-convertt.]
+2024-05-02 12:19:45.434 [http-nio-8080-exec-8] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Required request parameter 'milliseconds' for method parameter type long is not present
+2024-05-02 12:19:45.434 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'milliseconds' for method parameter type long is not present]
+2024-05-02 12:19:50.685 [http-nio-8080-exec-1] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Required request parameter 'milliseconds' for method parameter type long is not present
+2024-05-02 12:19:50.685 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'milliseconds' for method parameter type long is not present]
+2024-05-02 12:19:54.258 [http-nio-8080-exec-3] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "565656565659t"
+2024-05-02 12:19:54.258 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "565656565659t"]
+2024-05-02 12:19:58.491 [http-nio-8080-exec-6] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "565t656565659"
+2024-05-02 12:19:58.492 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "565t656565659"]
+2024-05-02 12:20:08.173 [http-nio-8080-exec-7] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 5656565656595656
+2024-05-02 12:20:08.185 [http-nio-8080-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1292, SQLState: 22001
+2024-05-02 12:20:08.185 [http-nio-8080-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Data truncation: Incorrect datetime value: '181219-06-06 21:56:35.656' for column 'gmt_time' at row 1
+2024-05-02 12:20:08.187 [http-nio-8080-exec-7] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: could not execute statement [Data truncation: Incorrect datetime value: '181219-06-06 21:56:35.656' for column 'gmt_time' at row 1] [insert into time_converter (gmt_time,local_time) values (?,?)]; SQL [insert into time_converter (gmt_time,local_time) values (?,?)]
+2024-05-02 12:20:08.187 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Data truncation: Incorrect datetime value: '181219-06-06 21:56:35.656' for column 'gmt_time' at row 1] [insert into time_converter (gmt_time,local_time) values (?,?)]; SQL [insert into time_converter (gmt_time,local_time) values (?,?)]]
+2024-05-02 12:20:14.640 [http-nio-8080-exec-2] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 565656565659565
+2024-05-02 12:20:14.647 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1292, SQLState: 22001
+2024-05-02 12:20:14.647 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Data truncation: Incorrect datetime value: '19894-12-10 23:47:39.565' for column 'gmt_time' at row 1
+2024-05-02 12:20:14.648 [http-nio-8080-exec-2] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: could not execute statement [Data truncation: Incorrect datetime value: '19894-12-10 23:47:39.565' for column 'gmt_time' at row 1] [insert into time_converter (gmt_time,local_time) values (?,?)]; SQL [insert into time_converter (gmt_time,local_time) values (?,?)]
+2024-05-02 12:20:14.649 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataIntegrityViolationException: could not execute statement [Data truncation: Incorrect datetime value: '19894-12-10 23:47:39.565' for column 'gmt_time' at row 1] [insert into time_converter (gmt_time,local_time) values (?,?)]; SQL [insert into time_converter (gmt_time,local_time) values (?,?)]]
+2024-05-02 12:20:16.315 [http-nio-8080-exec-1] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 56565656565956
+2024-05-02 12:21:23.794 [http-nio-8080-exec-5] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: No static resource time-data/bulk/hui.
+2024-05-02 12:21:23.795 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource time-data/bulk/hui.]
+2024-05-02 12:21:59.437 [http-nio-8080-exec-4] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 90
+2024-05-02 12:23:43.257 [http-nio-8080-exec-2] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt56565656565956"
+2024-05-02 12:23:43.258 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt56565656565956"]
+2024-05-02 12:24:52.915 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 12:24:52.917 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-02 12:24:52.922 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-02 12:24:59.889 [restartedMain] INFO  a.m.d.DateConverterApplication - Starting DateConverterApplication using Java 22 with PID 16676 (C:\projects\java\DateConverter\target\classes started by Alex in C:\projects\java\DateConverter)
+2024-05-02 12:24:59.892 [restartedMain] INFO  a.m.d.DateConverterApplication - No active profile set, falling back to 1 default profile: "default"
+2024-05-02 12:24:59.944 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-02 12:24:59.944 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-02 12:25:00.636 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-02 12:25:00.677 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2024-05-02 12:25:01.114 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-05-02 12:25:01.120 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-02 12:25:01.122 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-02 12:25:01.123 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-05-02 12:25:01.151 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-02 12:25:01.152 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1207 ms
+2024-05-02 12:25:01.233 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-02 12:25:01.258 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-02 12:25:01.274 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-02 12:25:01.410 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-02 12:25:01.424 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-02 12:25:01.502 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5efbf011
+2024-05-02 12:25:01.503 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-02 12:25:01.523 [restartedMain] WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.6.51 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-05-02 12:25:02.043 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-02 12:25:02.101 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 12:25:02.240 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-02 12:25:02.619 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-02 12:25:03.276 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-05-02 12:25:03.292 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-02 12:25:03.302 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-05-02 12:25:03.311 [restartedMain] INFO  a.m.d.DateConverterApplication - Started DateConverterApplication in 3.77 seconds (process running for 4.56)
+2024-05-02 12:25:08.004 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-02 12:25:08.004 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-02 12:25:08.005 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-05-02 12:25:08.034 [http-nio-8080-exec-1] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt56565656565956"
+2024-05-02 12:25:08.047 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt56565656565956"]
+2024-05-02 12:25:12.828 [http-nio-8080-exec-5] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "---56565656565956"
+2024-05-02 12:25:12.830 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "---56565656565956"]
+2024-05-02 12:25:15.462 [http-nio-8080-exec-2] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "--56565656565956"
+2024-05-02 12:25:15.463 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "--56565656565956"]
+2024-05-02 12:25:17.207 [http-nio-8080-exec-8] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: -56565656565956
+2024-05-02 12:25:19.714 [http-nio-8080-exec-10] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 56565656565956
+2024-05-02 12:25:21.963 [http-nio-8080-exec-3] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "=56565656565956"
+2024-05-02 12:25:21.966 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "=56565656565956"]
+2024-05-02 12:25:25.542 [http-nio-8080-exec-1] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "-09876t556565656565956"
+2024-05-02 12:25:25.543 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "-09876t556565656565956"]
+2024-05-02 12:25:31.678 [http-nio-8080-exec-5] INFO  o.a.coyote.http11.Http11Processor - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/date-convert?milliseconds=nhbgjfo]56565656565956 ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:482)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:264)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+2024-05-02 12:25:51.654 [http-nio-8080-exec-2] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 56565656565956
+2024-05-02 12:26:07.533 [http-nio-8080-exec-7] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt565656565659"
+2024-05-02 12:26:07.534 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt565656565659"]
+2024-05-02 12:32:23.413 [http-nio-8080-exec-8] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 12:32:28.598 [http-nio-8080-exec-3] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 12:32:39.060 [http-nio-8080-exec-9] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unexpected character ('f' (code 102)): was expecting double-quote to start field name
+2024-05-02 12:32:39.061 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('f' (code 102)): was expecting double-quote to start field name]
+2024-05-02 12:32:45.499 [http-nio-8080-exec-4] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unexpected character ('f' (code 102)): was expecting double-quote to start field name
+2024-05-02 12:32:45.500 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('f' (code 102)): was expecting double-quote to start field name]
+2024-05-02 12:32:49.042 [http-nio-8080-exec-6] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+2024-05-02 12:32:49.043 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('e' (code 101)): was expecting double-quote to start field name]
+2024-05-02 12:32:52.906 [http-nio-8080-exec-7] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+2024-05-02 12:32:52.907 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('e' (code 101)): was expecting double-quote to start field name]
+2024-05-02 12:37:31.471 [http-nio-8080-exec-8] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+2024-05-02 12:37:31.472 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('e' (code 101)): was expecting double-quote to start field name]
+2024-05-02 12:37:46.476 [http-nio-8080-exec-3] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 12:38:13.925 [http-nio-8080-exec-1] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=2024-04-19T15:30:06, timeConverter=null)
+2024-05-02 12:39:24.886 [http-nio-8080-exec-6] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: JSON parse error: Unexpected character ('}' (code 125)): expected a value
+2024-05-02 12:39:24.887 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): expected a value]
+2024-05-02 12:39:30.993 [http-nio-8080-exec-7] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 2: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-02 12:39:44.425 [http-nio-8080-exec-10] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "2637г3567"
+2024-05-02 12:39:44.426 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "2637г3567"]
+2024-05-02 12:40:01.247 [http-nio-8080-exec-9] ERROR a.m.d.c.ErrorControllerAdvice - Internal server error: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt565656565659"
+2024-05-02 12:40:01.248 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; For input string: "tt565656565659"]
+2024-05-02 12:40:22.793 [http-nio-8080-exec-1] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 565656565659
+2024-05-02 12:41:56.164 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-02 12:41:56.172 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-02 12:41:56.186 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

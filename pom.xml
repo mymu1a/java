@@ -63,21 +63,48 @@
             <artifactId>logback-classic</artifactId>
             <version>1.3.14</version>
         </dependency>
-<!--        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.1</version> &lt;!&ndash; Или другая версия &ndash;&gt;
-            <scope>provided</scope>
-        </dependency>-->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.0.2</version>
+        </dependency>
+<!--        &lt;!&ndash; Зависимость для JUnit &ndash;&gt;
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito2</artifactId>
+            <version>2.0.9</version> &lt;!&ndash; Или другая актуальная версия &ndash;&gt;
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+            <version>2.0.9</version> &lt;!&ndash; Или другая актуальная версия &ndash;&gt;
+            <scope>test</scope>
+        </dependency>
+        &lt;!&ndash; Зависимость для Mockito &ndash;&gt;
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>4.2.0</version>
+            <scope>test</scope>
+        </dependency>
+        &lt;!&ndash; Зависимость для Mockito JUnit Jupiter &ndash;&gt;
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>4.2.0</version>
+            <scope>test</scope>
+        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>3.1.5</version>
         </dependency>
     </dependencies>
 

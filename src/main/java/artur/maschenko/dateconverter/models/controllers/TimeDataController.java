@@ -1,13 +1,13 @@
-package artur.maschenko.dateconverter.controllers;
+package artur.maschenko.dateconverter.models.controllers;
 
 import artur.maschenko.dateconverter.models.TimeData;
 import artur.maschenko.dateconverter.service.TimeDataService;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
 
 /** The type Time data controller. */
 @RestController
@@ -55,6 +55,13 @@ public class TimeDataController {
   @PostMapping("/")
   public TimeData saveTimeData(@RequestBody TimeData timeData) {
     return timeDataService.saveTimeData(timeData);
+  }
+
+@PostMapping("/bulk/")
+  public List<TimeData> saveTimeDataList(@RequestBody List<TimeData> timeDataList) {
+    return timeDataList.stream()
+            .map(timeDataService::saveTimeData)
+            .collect(Collectors.toList());
   }
 
   /**
