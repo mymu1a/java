@@ -1,15 +1,14 @@
 package artur.maschenko.dateconverter.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import artur.maschenko.dateconverter.models.TimeConverter;
 import artur.maschenko.dateconverter.models.TimeDeviceData;
 import artur.maschenko.dateconverter.repository.TimeDeviceDataRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import jakarta.persistence.EntityNotFoundException;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /** The type Time device data service. */
 @Service

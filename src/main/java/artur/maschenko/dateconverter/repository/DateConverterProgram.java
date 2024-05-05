@@ -1,13 +1,12 @@
 package artur.maschenko.dateconverter.repository;
 
-import org.springframework.stereotype.Component;
-
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
+import org.springframework.stereotype.Component;
 
 /** The type Date converter program. */
 @Component

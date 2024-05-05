@@ -1,16 +1,11 @@
 package artur.maschenko.dateconverter.service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import artur.maschenko.dateconverter.models.TimeConverter;
 import artur.maschenko.dateconverter.models.TimeData;
 import artur.maschenko.dateconverter.models.TimeDeviceData;
 import artur.maschenko.dateconverter.repository.TimeConverterRepository;
 import artur.maschenko.dateconverter.repository.TimeDataRepository;
 import artur.maschenko.dateconverter.repository.TimeDeviceDataRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -18,6 +13,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /** The type Date converter service. */
 @Service
@@ -54,18 +53,19 @@ public class DateConverterService {
     logger.info("Converting time for milliseconds: {}", milliseconds);
     Instant instant = Instant.ofEpochMilli(milliseconds);
     LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
-    LocalDateTime gmtDateTime = LocalDateTime.ofInstant(instant, ZoneId.of("GMT"));
-
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     TimeData timeData = new TimeData();
     timeData.setMilliseconds(milliseconds);
     timeDataRepository.save(timeData);
 
+    LocalDateTime gmtDateTime = LocalDateTime.ofInstant(instant, ZoneId.of("GMT"));
+
     TimeConverter timeConverter = new TimeConverter();
     timeConverter.setLocalTime(localDateTime);
     timeConverter.setGmtTime(gmtDateTime);
     timeConverterRepository.save(timeConverter);
+
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     Map<String, String> result = new HashMap<>();
     result.put("local date", localDateTime.format(formatter));
