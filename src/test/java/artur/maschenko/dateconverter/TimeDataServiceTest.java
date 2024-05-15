@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 /** The type Time data service test. */
-public class TimeDataServiceTest {
+class TimeDataServiceTest {
 
   @Mock private TimeDataRepository timeDataRepository;
 
