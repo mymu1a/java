@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 /** The type Time converter service test. */
-public class TimeConverterServiceTest {
+class TimeConverterServiceTest {
 
   @Mock private TimeConverterRepository timeConverterRepository;
 
@@ -31,7 +31,7 @@ public class TimeConverterServiceTest {
 
   /** Test get all time converters. */
   @Test
-  public void testGetAllTimeConverters() {
+  void testGetAllTimeConverters() {
     List<TimeConverter> expectedList = Collections.singletonList(new TimeConverter());
     when(timeConverterRepository.findAll()).thenReturn(expectedList);
 
@@ -43,7 +43,7 @@ public class TimeConverterServiceTest {
 
   /** Test get time converter by id. */
   @Test
-  public void testGetTimeConverterById() {
+  void testGetTimeConverterById() {
     long id = 1L;
     TimeConverter expected = new TimeConverter();
     expected.setId(id);
@@ -58,7 +58,7 @@ public class TimeConverterServiceTest {
 
   /** Test save time converter. */
   @Test
-  public void testSaveTimeConverter() {
+  void testSaveTimeConverter() {
     TimeConverter timeConverter = new TimeConverter();
     when(timeConverterRepository.save(any(TimeConverter.class))).thenReturn(timeConverter);
 
@@ -70,7 +70,7 @@ public class TimeConverterServiceTest {
 
   /** Test update time converter. */
   @Test
-  public void testUpdateTimeConverter() {
+  void testUpdateTimeConverter() {
     long id = 1L;
     TimeConverter timeConverter = new TimeConverter();
     timeConverter.setId(id);
@@ -85,7 +85,7 @@ public class TimeConverterServiceTest {
 
   /** Test delete time converter. */
   @Test
-  public void testDeleteTimeConverter() {
+  void testDeleteTimeConverter() {
     long id = 1L;
 
     timeConverterService.deleteTimeConverter(id);

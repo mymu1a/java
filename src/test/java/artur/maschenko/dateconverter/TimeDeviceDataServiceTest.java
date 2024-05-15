@@ -1,26 +1,27 @@
 package artur.maschenko.dateconverter;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.*;
-
 import artur.maschenko.dateconverter.models.TimeConverter;
 import artur.maschenko.dateconverter.models.TimeDeviceData;
 import artur.maschenko.dateconverter.repository.TimeDeviceDataRepository;
 import artur.maschenko.dateconverter.service.TimeDeviceDataService;
-import java.time.LocalDateTime;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.time.LocalDateTime;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.*;
+
 /**
  * The type Time device data service test.
  */
-public class TimeDeviceDataServiceTest {
+class TimeDeviceDataServiceTest {
 
   @Mock private TimeDeviceDataRepository timeDeviceDataRepository;
 
@@ -38,7 +39,7 @@ public class TimeDeviceDataServiceTest {
    * Test get all time device data.
    */
 @Test
-  public void testGetAllTimeDeviceData() {
+  void testGetAllTimeDeviceData() {
     List<TimeDeviceData> expectedList = Collections.singletonList(new TimeDeviceData());
     when(timeDeviceDataRepository.findAll()).thenReturn(expectedList);
 
@@ -52,7 +53,7 @@ public class TimeDeviceDataServiceTest {
    * Test get time device data by id.
    */
 @Test
-  public void testGetTimeDeviceDataById() {
+  void testGetTimeDeviceDataById() {
     long id = 1L;
     TimeDeviceData expected = new TimeDeviceData();
     expected.setId(id);
@@ -69,7 +70,7 @@ public class TimeDeviceDataServiceTest {
    * Test save time device data.
    */
 @Test
-  public void testSaveTimeDeviceData() {
+  void testSaveTimeDeviceData() {
     TimeDeviceData timeDeviceData = new TimeDeviceData();
     when(timeDeviceDataRepository.save(any(TimeDeviceData.class))).thenReturn(timeDeviceData);
 
@@ -83,7 +84,7 @@ public class TimeDeviceDataServiceTest {
    * Test add to time converter.
    */
 @Test
-  public void testAddToTimeConverter() {
+  void testAddToTimeConverter() {
     long converterId = 1L;
     TimeConverter timeConverter = new TimeConverter();
     timeConverter.setId(converterId);
@@ -103,7 +104,7 @@ public class TimeDeviceDataServiceTest {
    * Test update time device data.
    */
 @Test
-  public void testUpdateTimeDeviceData() {
+  void testUpdateTimeDeviceData() {
     long id = 1L;
     TimeDeviceData newData = new TimeDeviceData();
     newData.setId(id);
@@ -124,7 +125,7 @@ public class TimeDeviceDataServiceTest {
 
   /** Test delete time device data. */
   @Test
-  public void testDeleteTimeDeviceData() {
+  void testDeleteTimeDeviceData() {
     long id = 1L;
 
     timeDeviceDataService.deleteTimeDeviceData(id);

@@ -31,7 +31,7 @@ public class TimeDataServiceTest {
 
   /** Test get all time data. */
   @Test
-  public void testGetAllTimeData() {
+  void testGetAllTimeData() {
     List<TimeData> expectedList = Collections.singletonList(new TimeData());
     when(timeDataRepository.findAll()).thenReturn(expectedList);
 
@@ -43,7 +43,7 @@ public class TimeDataServiceTest {
 
   /** Test get time data by id. */
   @Test
-  public void testGetTimeDataById() {
+  void testGetTimeDataById() {
     long id = 1L;
     TimeData expected = new TimeData();
     expected.setId(id);
@@ -58,7 +58,7 @@ public class TimeDataServiceTest {
 
   /** Test save time data. */
   @Test
-  public void testSaveTimeData() {
+  void testSaveTimeData() {
     TimeData timeData = new TimeData();
     when(timeDataRepository.save(any(TimeData.class))).thenReturn(timeData);
 
@@ -70,7 +70,7 @@ public class TimeDataServiceTest {
 
   /** Test update time data. */
   @Test
-  public void testUpdateTimeData() {
+  void testUpdateTimeData() {
     long id = 1L;
     TimeData timeData = new TimeData();
     timeData.setId(id);
@@ -85,7 +85,7 @@ public class TimeDataServiceTest {
 
   /** Test delete time data. */
   @Test
-  public void testDeleteTimeData() {
+  void testDeleteTimeData() {
     long id = 1L;
 
     timeDataService.deleteTimeData(id);
@@ -95,7 +95,7 @@ public class TimeDataServiceTest {
 
   /** Test get max milliseconds. */
   @Test
-  public void testGetMaxMilliseconds() {
+  void testGetMaxMilliseconds() {
     long expectedMaxMilliseconds = 1000L;
     when(timeDataRepository.findMaxMilliseconds()).thenReturn(expectedMaxMilliseconds);
 

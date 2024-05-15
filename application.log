@@ -2592,3 +2592,29 @@ java.lang.IllegalArgumentException: Invalid character found in the request targe
 2024-05-04 09:46:52.963 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-05-04 09:46:52.971 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-05-04 09:46:52.983 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-15 22:18:16.649 [main] INFO  a.m.d.service.TimeDeviceDataService - Adding time device data to converter with ID 1: TimeDeviceData(id=null, deviceTime=null, timeConverter=TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null))
+2024-05-15 22:18:16.696 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting time device data by ID: 1
+2024-05-15 22:18:16.696 [main] INFO  a.m.d.service.TimeDeviceDataService - Updating time device data with ID 1: TimeDeviceData(id=1, deviceTime=2024-05-15T22:18:16.696307800, timeConverter=null)
+2024-05-15 22:18:16.696 [main] INFO  a.m.d.service.TimeDeviceDataService - Getting all time device data
+2024-05-15 22:18:16.711 [main] INFO  a.m.d.service.TimeDeviceDataService - Deleting time device data with ID: 1
+2024-05-15 22:18:16.716 [main] INFO  a.m.d.service.TimeDeviceDataService - Saving time device data: TimeDeviceData(id=null, deviceTime=null, timeConverter=null)
+2024-05-15 22:18:16.781 [main] INFO  a.m.d.service.TimeConverterService - Getting all time converters
+2024-05-15 22:18:16.781 [main] INFO  a.m.d.service.TimeConverterService - Deleting time converter with ID: 1
+2024-05-15 22:18:16.781 [main] INFO  a.m.d.service.TimeConverterService - Updating time converter with ID 1: TimeConverter(id=1, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-15 22:18:16.797 [main] INFO  a.m.d.service.TimeConverterService - Getting time converter by ID: 1
+2024-05-15 22:18:16.797 [main] INFO  a.m.d.service.TimeConverterService - Saving time converter: TimeConverter(id=null, localTime=null, gmtTime=null, timeDeviceDataList=null)
+2024-05-15 22:18:16.875 [main] INFO  a.m.d.service.DateConverterService - Converting time for milliseconds: 1620237600000
+2024-05-15 22:18:16.875 [main] INFO  a.m.d.service.DateConverterService - Adding device time to converter with ID: 1
+2024-05-15 22:18:16.937 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-15 22:18:16.937 [main] INFO  a.m.d.service.CacheService - Getting value for key 'testKey' from cache
+2024-05-15 22:18:16.937 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-15 22:18:16.937 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-15 22:18:16.953 [main] INFO  a.m.d.service.CacheService - Put key 'testKey' into cache
+2024-05-15 22:18:16.953 [main] INFO  a.m.d.service.CacheService - Removing key 'testKey' from cache
+2024-05-15 22:18:16.953 [main] INFO  a.m.d.service.CacheService - Checking if cache contains key 'testKey'
+2024-05-15 22:18:16.969 [main] INFO  a.m.d.service.TimeDataService - Saving time data: TimeData(id=null, milliseconds=null)
+2024-05-15 22:18:16.969 [main] INFO  a.m.d.service.TimeDataService - Deleting time data with ID: 1
+2024-05-15 22:18:16.969 [main] INFO  a.m.d.service.TimeDataService - Getting time data by ID: 1
+2024-05-15 22:18:16.969 [main] INFO  a.m.d.service.TimeDataService - Getting all time data
+2024-05-15 22:18:16.984 [main] INFO  a.m.d.service.TimeDataService - Getting max milliseconds
+2024-05-15 22:18:16.984 [main] INFO  a.m.d.service.TimeDataService - Updating time data with ID 1: TimeData(id=1, milliseconds=null)

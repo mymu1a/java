@@ -25,7 +25,7 @@ import static org.mockito.Mockito.*;
 /**
  * The type Date converter service test.
  */
-public class DateConverterServiceTest {
+class DateConverterServiceTest {
 
   @Mock private TimeDataRepository timeDataRepository;
 
@@ -47,7 +47,7 @@ public class DateConverterServiceTest {
    * Test convert time.
    */
   @Test
-  public void testConvertTime() {
+  void testConvertTime() {
     long milliseconds = 1620237600000L; // Example milliseconds value
     LocalDateTime localDateTime =
             LocalDateTime.ofInstant(
@@ -75,7 +75,7 @@ public class DateConverterServiceTest {
 
   /** Test add device time to converter. */
   @Test
-  public void testAddDeviceTimeToConverter() {
+  void testAddDeviceTimeToConverter() {
     long converterId = 1L; // Example converter ID
     TimeConverter timeConverter = new TimeConverter();
     timeConverter.setId(converterId);
