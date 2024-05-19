@@ -2,14 +2,16 @@ package artur.maschenko.dateconverter.service;
 
 import artur.maschenko.dateconverter.models.TimeData;
 import artur.maschenko.dateconverter.repository.TimeDataRepository;
-import java.util.List;
-import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 /** The type Time data service. */
 @Service
@@ -96,5 +98,33 @@ public class TimeDataService {
   public Long getMaxMilliseconds() {
     logger.info("Getting max milliseconds");
     return timeDataRepository.findMaxMilliseconds();
+  }
+
+  /**
+   * Gets all time data with milliseconds greater than specified value.
+   *
+   * @param milliseconds the milliseconds value
+   * @return the list of time data with milliseconds greater than the specified value
+   */
+  @Cacheable("timeData")
+  public List<TimeData> getTimeDataWithMillisecondsGreaterThan(Long milliseconds) {
+    logger.info("Getting all time data with milliseconds greater than: {}", milliseconds);
+    return timeDataRepository.findAll().stream()
+            .filter(timeData -> timeData.getMilliseconds() > milliseconds)
+
+            .collect(Collectors.toList());
+  }
+
+  /**
+   * Gets the sum of milliseconds of all time data.
+   *
+   * @return the sum of milliseconds
+   */
+  @Cacheable("sumMilliseconds")
+  public Long getSumOfMilliseconds() {
+    logger.info("Calculating the sum of milliseconds of all time data");
+    return timeDataRepository.findAll().stream()
+            .mapToLong(TimeData::getMilliseconds)
+            .sum();
   }
 }
