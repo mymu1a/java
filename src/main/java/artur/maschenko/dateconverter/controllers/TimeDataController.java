@@ -107,4 +107,9 @@ public class TimeDataController {
     public Long getSumOfMilliseconds() {
         return timeDataService.getSumOfMilliseconds();
     }
+
+    @GetMapping("/time-data/request-count")
+    public int getRequestCount() {
+        return timeDataService.getRequestCount();
+    }
 }

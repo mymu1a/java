@@ -26,7 +26,7 @@ public class ErrorControllerAdvice {
    * @param ex the ex
    * @return the response entity
    */
-@ResponseStatus(HttpStatus.BAD_REQUEST)
+  @ResponseStatus(HttpStatus.BAD_REQUEST)
   @ExceptionHandler({
     HttpClientErrorException.class,
     HttpMessageNotReadableException.class,
@@ -45,7 +45,7 @@ public class ErrorControllerAdvice {
    * @param ex the ex
    * @return the response entity
    */
-@ExceptionHandler(value = {EntityNotFoundException.class})
+  @ExceptionHandler(value = {EntityNotFoundException.class})
   public ResponseEntity<ErrorResponse> handleEntityNotFoundException(EntityNotFoundException ex) {
     logger.error("Illegal argument exception: {}", ex.getMessage());
     ErrorResponse errorResponse =
@@ -59,7 +59,7 @@ public class ErrorControllerAdvice {
    * @param ex the ex
    * @return the response entity
    */
-@ExceptionHandler(value = {HttpRequestMethodNotSupportedException.class})
+  @ExceptionHandler(value = {HttpRequestMethodNotSupportedException.class})
   public ResponseEntity<ErrorResponse> handleHttpRequestMethodNotSupportedException(
       HttpRequestMethodNotSupportedException ex) {
     logger.error("Method not allowed: {}", ex.getMessage());
@@ -74,7 +74,7 @@ public class ErrorControllerAdvice {
    * @param ex the ex
    * @return the response entity
    */
-@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+  @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
   @ExceptionHandler(RuntimeException.class)
   public ErrorResponse handleInternalServerError(RuntimeException ex) {
     logger.error("Internal server error: {}", ex.getMessage());
@@ -82,7 +82,7 @@ public class ErrorControllerAdvice {
   }
 
   /** The type Error response. */
-public static class ErrorResponse {
+  public static class ErrorResponse {
     private final int status;
     private final String message;
 
@@ -92,7 +92,7 @@ public static class ErrorResponse {
      * @param status the status
      * @param message the message
      */
-public ErrorResponse(HttpStatus status, String message) {
+    public ErrorResponse(HttpStatus status, String message) {
       this.status = status.value();
       this.message = message;
     }
@@ -102,7 +102,7 @@ public ErrorResponse(HttpStatus status, String message) {
      *
      * @return the status
      */
-public int getStatus() {
+    public int getStatus() {
       return status;
     }
 
@@ -111,7 +111,7 @@ public int getStatus() {
      *
      * @return the message
      */
-public String getMessage() {
+    public String getMessage() {
       return message;
     }
   }

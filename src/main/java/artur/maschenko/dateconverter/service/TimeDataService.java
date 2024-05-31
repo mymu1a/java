@@ -1,5 +1,6 @@
 package artur.maschenko.dateconverter.service;
 
+import artur.maschenko.dateconverter.component.RequestCounter;
 import artur.maschenko.dateconverter.models.TimeData;
 import artur.maschenko.dateconverter.repository.TimeDataRepository;
 import org.slf4j.Logger;
@@ -29,6 +30,9 @@ public class TimeDataService {
     this.timeDataRepository = timeDataRepository;
   }
 
+  @Autowired
+  private RequestCounter requestCounter;
+
   /**
    * Gets all time data.
    *
@@ -36,6 +40,7 @@ public class TimeDataService {
    */
   @Cacheable("timeData")
   public List<TimeData> getAllTimeData() {
+    requestCounter.increment();
     logger.info("Getting all time data");
     return timeDataRepository.findAll();
   }
@@ -48,6 +53,7 @@ public class TimeDataService {
    */
   @Cacheable("timeData")
   public Optional<TimeData> getTimeDataById(Long id) {
+    requestCounter.increment();
     logger.info("Getting time data by ID: {}", id);
     return timeDataRepository.findById(id);
   }
@@ -111,7 +117,6 @@ public class TimeDataService {
     logger.info("Getting all time data with milliseconds greater than: {}", milliseconds);
     return timeDataRepository.findAll().stream()
             .filter(timeData -> timeData.getMilliseconds() > milliseconds)
-
             .collect(Collectors.toList());
   }
 
@@ -126,5 +131,9 @@ public class TimeDataService {
     return timeDataRepository.findAll().stream()
             .mapToLong(TimeData::getMilliseconds)
             .sum();
+  }
+
+  public int getRequestCount() {
+    return requestCounter.getCount();
   }
 }
