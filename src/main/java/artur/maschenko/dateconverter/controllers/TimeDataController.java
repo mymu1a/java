@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
  * The type Time data controller.
  */
 @RestController
+@CrossOrigin
 @RequestMapping("/time-data")
 public class TimeDataController {
     private final TimeDataService timeDataService;

@@ -1,13 +1,21 @@
-<script setup>
-
-</script>
-
 <template>
-  <h1>Hello</h1>
+  <div id="app">
+    <nav>
+      <router-link to="/time-converter">Time Converter</router-link> |
+      <router-link to="/time-device-data">Time Device Data</router-link>
+    </nav>
+    <router-view></router-view>
+  </div>
 </template>
 
+<script>
+export default {
+  name: 'App',
+};
+</script>
+
 <style scoped>
-  h1 {
-    color: red;
-  }
+nav {
+  margin-bottom: 20px;
+}
 </style>

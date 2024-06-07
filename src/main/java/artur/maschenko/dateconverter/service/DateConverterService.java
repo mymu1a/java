@@ -103,4 +103,15 @@ public class DateConverterService {
     logger.info("Getting max milliseconds");
     return timeDataRepository.findMaxMilliseconds();
   }
+
+
+  private String millisecondsToTime(long milliseconds) {
+    long seconds = milliseconds / 1000;
+    long minutes = seconds / 60;
+    long hours = minutes / 60;
+    seconds = seconds % 60;
+    minutes = minutes % 60;
+    hours = hours % 24;
+    return String.format("%02d:%02d:%02d", hours, minutes, seconds);
+  }
 }
