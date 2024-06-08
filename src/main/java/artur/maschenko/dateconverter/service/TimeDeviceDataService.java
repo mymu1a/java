@@ -4,11 +4,12 @@ import artur.maschenko.dateconverter.models.TimeConverter;
 import artur.maschenko.dateconverter.models.TimeDeviceData;
 import artur.maschenko.dateconverter.repository.TimeDeviceDataRepository;
 import jakarta.persistence.EntityNotFoundException;
-import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /** The type Time device data service. */
 @Service
@@ -68,8 +69,7 @@ public class TimeDeviceDataService {
    * @return the time device data
    */
   public TimeDeviceData addToTimeConverter(Long timeConverterId, TimeDeviceData timeDeviceData) {
-    logger.info(
-        "Adding time device data to converter with ID {}: {}", timeConverterId, timeDeviceData);
+    logger.info("Adding time device data to converter with ID {}: {}", timeConverterId, timeDeviceData);
     TimeConverter timeConverter = new TimeConverter();
     timeConverter.setId(timeConverterId);
     timeDeviceData.setTimeConverter(timeConverter);

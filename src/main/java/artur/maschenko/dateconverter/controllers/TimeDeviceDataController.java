@@ -2,17 +2,22 @@ package artur.maschenko.dateconverter.controllers;
 
 import artur.maschenko.dateconverter.models.TimeDeviceData;
 import artur.maschenko.dateconverter.service.TimeDeviceDataService;
-import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /** The type Time device data controller. */
 @RestController
 @CrossOrigin
 @RequestMapping("/time-devices")
 public class TimeDeviceDataController {
+  private static final Logger logger = LoggerFactory.getLogger(TimeDeviceDataController.class);
+
   private final TimeDeviceDataService timeDeviceDataService;
 
   /**
@@ -70,11 +75,14 @@ public class TimeDeviceDataController {
    */
   @PostMapping("/add-to-converter/{timeConverterId}")
   public ResponseEntity<TimeDeviceData> addToTimeConverter(
-      @PathVariable Long timeConverterId, @RequestBody TimeDeviceData timeDeviceData) {
+          @PathVariable Long timeConverterId, @RequestBody TimeDeviceData timeDeviceData) {
+    logger.info("Received request to add TimeDeviceData to TimeConverter with ID {}", timeConverterId);
     TimeDeviceData savedTimeDeviceData =
-        timeDeviceDataService.addToTimeConverter(timeConverterId, timeDeviceData);
+            timeDeviceDataService.addToTimeConverter(timeConverterId, timeDeviceData);
     return ResponseEntity.status(HttpStatus.CREATED).body(savedTimeDeviceData);
   }
+
+
 
   /**
    * Update time device data response entity.
