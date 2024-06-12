@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  app:
+    build:
+      context: .
+    image: mysql
+    container_name: app
+    ports:
+      - "8080:8080"
+    environment:
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DB=${MYSQL_DB}
+      - SPRING_DATASOURCE_URL=${spring.datasource.url}
+      - SPRING_DATASOURCE_USERNAME=${spring.datasource.username}
+      - SPRING_DATASOURCE_PASSWORD=${spring.datasource.password}
+    depends_on:
+      - db
+
+  db:
+    image: 'mysql:8.0'
+    container_name: db
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DB}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
