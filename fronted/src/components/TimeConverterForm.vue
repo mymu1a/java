@@ -1,14 +1,26 @@
 <template>
-  <div>
+  <div class="container">
     <h1>Time Converter</h1>
     <form @submit.prevent="convertAndAddTime">
       <input v-model="milliseconds" placeholder="Milliseconds" required />
       <button type="submit">Add</button>
     </form>
     <ul>
-      <li v-for="TimeConverter in TimeConverter" :key="TimeConverter.id">
-        ID: {{ TimeConverter.id }}, localTime: {{ TimeConverter.localTime }}, gmtTime: {{ TimeConverter.gmtTime }}, timeDeviceDataList:{{ TimeConverter.timeDeviceDataList }}
-        <button @click="deleteConverter(TimeConverter.id)">Delete</button>
+      <li v-for="converter in timeConverters" :key="converter.id" class="converter-item">
+        <div class="converter-info">
+          <div>ID: {{ converter.id }}</div>
+          <div>Local Time: {{ formatDate(converter.localTime) }}</div>
+          <div>GMT Time: {{ formatDate(converter.gmtTime) }}</div>
+        </div>
+        <div class="device-data-list">
+          <div>Time Device Data List:</div>
+          <ul>
+            <li v-for="deviceData in converter.timeDeviceDataList" :key="deviceData.id" class="device-data-item">
+              Device ID: {{ deviceData.id }}, Device Time: {{ formatDate(deviceData.deviceTime) }}
+            </li>
+          </ul>
+        </div>
+        <button @click="deleteConverter(converter.id)">Delete</button>
       </li>
     </ul>
   </div>
@@ -20,28 +32,23 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      TimeConverter: '',
+      timeConverters: [],
       milliseconds: '',
-      id: '',
-      localTime: '',
-      gmtTime: '',
-      timeDeviceDataList: []
     };
   },
   methods: {
     async fetchConverters() {
       try {
         const response = await axios.get('http://localhost:8080/time-converter/');
-        this.TimeConverter = response.data;
+        this.timeConverters = response.data;
       } catch (error) {
         console.error('Failed to fetch converters', error);
       }
     },
     async convertAndAddTime() {
       try {
-        // Call the convert endpoint first
-        const convertResponse = await axios.get(`http://localhost:8080/date-convert`, {
-          params: { milliseconds: this.milliseconds }
+        await axios.get('http://localhost:8080/date-convert', {
+          params: { milliseconds: this.milliseconds },
         });
         this.milliseconds = '';
         this.fetchConverters();
@@ -56,11 +63,15 @@ export default {
       } catch (error) {
         console.error('Failed to delete converter', error);
       }
+    },
+    formatDate(date) {
+      const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      return new Date(date).toLocaleDateString(undefined, options);
     }
   },
   mounted() {
     this.fetchConverters();
-  }
+  },
 };
 </script>
 
@@ -71,6 +82,12 @@ body {
   color: #f0f6fc;
   margin: 0;
   padding: 0;
+}
+
+.container {
+  max-width: 800px; /* Set the maximum width */
+  margin: 0 auto; /* Center the container */
+  padding: 16px;
 }
 
 h1 {
@@ -123,6 +140,25 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.converter-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.converter-info {
+  flex: 1;
+}
+
+.device-data-list {
+  flex: 2; /* Increased flex value to make this section larger */
+  margin-left: 16px;
+}
+
+.device-data-item {
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 li button {

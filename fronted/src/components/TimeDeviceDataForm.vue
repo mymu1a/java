@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1>Time Device Data</h1>
     <form @submit.prevent="addTimeDeviceData">
       <input v-model="deviceTime" placeholder="Time" required />
@@ -7,8 +7,9 @@
       <button type="submit">Add</button>
     </form>
     <ul>
-      <li v-for="timeDeviceData in timeDeviceData" :key="timeDeviceData.id">
-        ID: {{ timeDeviceData.id }}, DeviceTime: {{ timeDeviceData.deviceTime }}
+      <li v-for="timeDeviceData in timeDeviceDataList" :key="timeDeviceData.id" class="device-data-item">
+        <div>ID: {{ timeDeviceData.id }}</div>
+        <div>Device Time: {{ formatDate(timeDeviceData.deviceTime) }}</div>
         <button @click="deleteTimeDeviceData(timeDeviceData.id)">Delete</button>
       </li>
     </ul>
@@ -21,8 +22,7 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      timeDeviceData: '',
-      id: '',
+      timeDeviceDataList: [],
       deviceTime: '',
       timeConverter: '',
     };
@@ -31,15 +31,15 @@ export default {
     async fetchTimeDeviceData() {
       try {
         const response = await axios.get('http://localhost:8080/time-devices/all');
-        this.timeDeviceData = response.data;
+        this.timeDeviceDataList = response.data;
       } catch (error) {
         console.error('Failed to fetch time device data', error);
       }
     },
     async addTimeDeviceData() {
       try {
-        const response = await axios.post(`http://localhost:8080/time-devices/add-to-converter/${this.timeConverter}`, {
-          deviceTime: this.deviceTime
+        await axios.post(`http://localhost:8080/time-devices/add-to-converter/${this.timeConverter}`, {
+          deviceTime: this.deviceTime,
         });
         this.deviceTime = '';
         this.timeConverter = '';
@@ -55,11 +55,15 @@ export default {
       } catch (error) {
         console.error('Failed to delete time device data', error);
       }
+    },
+    formatDate(date) {
+      const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      return new Date(date).toLocaleDateString(undefined, options);
     }
   },
   mounted() {
     this.fetchTimeDeviceData();
-  }
+  },
 };
 </script>
 
@@ -70,6 +74,12 @@ body {
   color: #f0f6fc;
   margin: 0;
   padding: 0;
+}
+
+.container {
+  max-width: 800px; /* Set the maximum width */
+  margin: 0 auto; /* Center the container */
+  padding: 16px;
 }
 
 h1 {
@@ -122,6 +132,12 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.device-data-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 li button {
